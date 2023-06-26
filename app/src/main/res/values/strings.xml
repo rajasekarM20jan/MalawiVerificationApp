@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">MalawiVerificationApp</string>
+    <string name="gps_not_enabled">GPS locations is not enabled.Please enable it</string>
+    <string name="noNetwork">Please check your network connection</string>
+    <string name="enter_phone">Verify your phone number</string>
+    <string name="mobile_hint">XXX XXX XXX</string>
+    <string name="_265">+265</string>
+    <string name="send_otp">SEND OTP</string>
+    <string name="otp_wait">Please wait your OTP will receive in</string>
+    <string name="_00_59">00:59</string>
+    <string name="resend_otp">RESEND OTP</string>
+    <string name="otp_not_received">Didn\'t receive OTP? TRY</string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="otp_sent">OTP has been sent to your mobile number</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="verification_app_text">Experience Seamless Policy Verification with our App - Instantly Confirm the Validity of Your Purchased Policy!</string>
+    <string name="vc_printCode">Verify Certificate - Print Code</string>
+    <string name="vc_no_printCode">Verify Certificate - Without Print Code</string>
+    <string name="vc_secure">Verify Certificate - Secure</string>
+    <string name="verification_history">Verification History</string>
+    <string name="or">(OR)</string>
+    <string name="login_police">Login as Police</string>
+    <string name="choose_login">Our app utilizes a fast and efficient certificate verification system to instantly retrieve the status of certificates. With this feature, users can quickly confirm the validity and authenticity of certificates by simply scanning the certificate through the app.</string>
+    <string name="login_guest">Login as Guest</string>
+    <string name="align_barcode">Hold your phone up to the barcode</string>
+    <string name="scanning_terms">Scanning will read the qrcode automatically within 30 seconds,if not please click on enter manually icon to proceed.</string>
+    <string name="verify_certDetails">Please verify your certificate details below.</string>
+    <string name="certificate">Certificate #</string>
+    <string name="colon">:</string>
+    <string name="certNum">C22498189</string>
+    <string name="vehicle">Vehicle #</string>
+    <string name="vehNum">KCW558P</string>
+    <string name="ins_company">Insurance Company</string>
+    <string name="kenyaOrient">Kenya Orient Insurance Company Ltd.</string>
+    <string name="chassis">Chassis #</string>
+    <string name="chNum">E11–728616</string>
+    <string name="policy_start">Policy Start Date</string>
+    <string name="date1">17/11/2020 00:00</string>
+    <string name="policy_end">Policy End Date</string>
+    <string name="date2">16/12/2020 23:59</string>
+    <string name="brand">Vehicle Make</string>
+    <string name="nissan">NISSAN</string>
+    <string name="model">Vehicle Model</string>
+    <string name="modelName">NOTE</string>
+    <string name="cancelled_date">Cancelled Date</string>
+    <string name="date3">17/11/2020 12:00</string>
+    <string name="cancel_reason">Cancelled Reason</string>
+    <string name="reasonText">Self-Validation to ensure I have correct certificate</string>
+    <string name="done">DONE</string>
+    <string name="insurance_company">Insurance Company</string>
+    <string name="reg_ch_num">Registration or Chassis Number</string>
+    <string name="back">BACK</string>
+    <string name="verify">VERIFY</string>
+    <string name="certNumber">Certificate Number</string>
+    <string name="enter_mobile_num">Please Enter the mobile number before proceeding</string>
+    <string name="OK">OK</string>
+    <string name="enter_otp">Please enter the One Time Password before proceeding.</string>
+    <string name="timer">00:</string>
+    <string name="timer2">00:0</string>
+    <string name="exit_alert">Are you sure you want to exit the app?</string>
+    <string name="registerNumAlert">Please provide your Registration or Chassis Number before proceeding to verify</string>
+    <string name="certNumAlert">Please provide the Certificate Number before proceeding to verify</string>
+    <string name="insuranceAlert">Please select an insurance company before proceeding to verify</string>
+    <string name="verifyResult">Verification Result</string>
+    <string name="session_expired">Your session have been expired. Please login again to continue</string>
+    <string name="base_url" translatable="false">https://malawi-dev.dmvic.com</string>
+    <string name="chassisNum">Chassis Number</string>
+    <string name="regNum">Registration Number</string>
+    <string name="cmn_wrong_msg">An unexpected error occurred.</string>
+    <string name="vcCert">Verify with Certificate</string>
+    <string name="verificationCert">Verify With Certificate</string>
+    <string name="status">Certificate Status</string>
+    <string name="statVal">Upcoming</string>
+    <string name="auth_phrase">Experience Seamless Policy Verification with our App - Instantly Confirm the Validity of Your Purchased Policy!</string>
+    <string name="engine">Engine #</string>
+    <string name="toc">Type Of Cover</string>
+    <string name="comprehensive">Comprehensive</string>
+    <string name="dummy" translatable="false">XXXXXXXX</string>
+    <string name="no_records_to_display" translatable="false">No Records to display</string>
+    <string name="certVer">Certificate Verification!</string>
+    <string name="getStrt">Getting Started</string>
+    <string name="cnfmMsg">IAM verification will send you a one time password to verify your mobile number</string>
+    <string name="phHint">Enter phone number</string>
+    <string-array name="insuranceSpinnerArray">
+        <item>--Select--</item>
+        <item>NICO</item>
+        <item>BRITAM</item>
+        <item>Reunion</item>
+        <item>LIBERTAS</item>
+        <item>UGI</item>
+        <item>CIC</item>
+        <item>PRIME</item>
+        <item>REUNION</item>
+        <item>GA</item>
+        <item>CIRCA</item>
+        <item>EPRIME</item>
+        <item>MYREUNION</item>
+        <item>GARA</item>
+    </string-array>
+</resources>

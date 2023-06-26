@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/apptheme"
+    android:id="@+id/parentLayout"
+    tools:context=".Dashboard">
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_10dp"
+            android:layout_marginBottom="@dimen/activity_margin_30dp"
+            android:weightSum="1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="@dimen/activity_margin_5dp"
+                android:layout_marginBottom="@dimen/activity_margin_5dp"
+                android:layout_marginStart="@dimen/activity_margin_55dp"
+                android:layout_marginEnd="@dimen/activity_margin_55dp"
+                android:padding="@dimen/activity_margin_5dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                android:textAlignment="textStart"
+                android:text="@string/verification_app_text"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/activity_margin_20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/switchLanguageIcon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:layout_width="@dimen/activity_margin_40dp"
+                android:layout_height="@dimen/activity_margin_40dp"
+                android:layout_marginEnd="@dimen/activity_margin_10dp"
+                android:visibility="gone"
+                android:src="@drawable/language2"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_borderdashboard"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/activity_margin_5dp"
+                android:paddingEnd="@dimen/activity_margin_10dp"
+                tools:ignore="ScrollViewSize">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin_20dp"
+                    android:layout_marginStart="@dimen/activity_margin_10dp"
+                    android:layout_marginEnd="@dimen/activity_margin_10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/vcPrintCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/activity_margin_8dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="@dimen/activity_margin_10dp"
+                        app:cardElevation="@dimen/activity_margin_5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/activity_margin_180dp"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:src="@drawable/verify_cert" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                                android:gravity="center_vertical|center"
+                                android:text="@string/vc_printCode"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/activity_margin_16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/vcNoPrintCode"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/activity_margin_8dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="@dimen/activity_margin_10dp"
+                        app:cardElevation="@dimen/activity_margin_5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/activity_margin_180dp"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:src="@drawable/verify_cert" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                                android:gravity="center_vertical|center"
+                                android:text="@string/vc_no_printCode"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/activity_margin_16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin_5dp"
+                    android:layout_marginStart="@dimen/activity_margin_10dp"
+                    android:layout_marginEnd="@dimen/activity_margin_10dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/vcSecure"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/activity_margin_8dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="@dimen/activity_margin_10dp"
+                        app:cardElevation="@dimen/activity_margin_5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/activity_margin_180dp"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:src="@drawable/verify_cert" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                                android:gravity="center_vertical|center"
+                                android:text="@string/vc_secure"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/activity_margin_16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/verifyWithCertificate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/activity_margin_8dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="@dimen/activity_margin_10dp"
+                        app:cardElevation="@dimen/activity_margin_5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/activity_margin_180dp"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:src="@drawable/verify_cert" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                                android:gravity="center_vertical|center"
+                                android:text="@string/verificationCert"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/activity_margin_16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin_5dp"
+                    android:layout_marginStart="@dimen/activity_margin_10dp"
+                    android:layout_marginEnd="@dimen/activity_margin_10dp"
+                    android:layout_marginBottom="@dimen/activity_margin_5dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/verifyHistory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/activity_margin_8dp"
+                        android:layout_marginStart="@dimen/activity_margin_10dp"
+                        android:layout_marginEnd="@dimen/activity_margin_10dp"
+                        app:cardBackgroundColor="@android:color/white"
+                        app:cardCornerRadius="@dimen/activity_margin_10dp"
+                        app:cardElevation="@dimen/activity_margin_5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/activity_margin_150dp"
+                                android:layout_height="@dimen/activity_margin_150dp"
+                                android:layout_margin="@dimen/activity_margin_10dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/verify_history" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/activity_margin_15dp"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                                android:gravity="center_vertical|center"
+                                android:text="@string/verification_history"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/activity_margin_16dp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+</LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

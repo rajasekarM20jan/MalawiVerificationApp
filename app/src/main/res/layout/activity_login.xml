@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/apptheme"
+    android:id="@+id/constraintLayout"
+    tools:context=".Login"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/getStrt"
+        android:textAlignment="center"
+        android:textSize="@dimen/activity_margin_20sp"
+        android:fontFamily="@font/latinotypeantartidaroundedmedium"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="@dimen/activity_margin_10dp"
+        android:layout_marginTop="@dimen/activity_margin_30dp"
+        android:layout_marginStart="@dimen/activity_margin_20dp"
+        android:layout_marginEnd="@dimen/activity_margin_20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:layout_marginTop="@dimen/activity_margin_20dp"
+        android:background="@drawable/custom_borderdashboard"
+        android:layout_gravity="center">
+
+        <!--                <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/dmvicloginphoto"
+                                android:layout_width="match_parent"
+                                android:layout_height="350dp"
+                                android:src="@drawable/malawidmviclogo">
+
+                            </ImageView>
+                        </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="@dimen/activity_margin_10dp"
+            android:layout_marginRight="@dimen/activity_margin_5dp"
+            android:orientation="vertical"
+            android:scrollbarStyle="outsideInset"
+            android:scrollbars="vertical">
+
+
+            <TextView
+                android:id="@+id/textViewlogin"
+                android:layout_margin="@dimen/activity_margin_15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/activity_margin_5dp"
+                android:text="@string/enter_phone"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:fontFamily="@font/latinotypeantartidaroundedbold"
+                android:textSize="@dimen/activity_margin_20sp" />
+
+
+            <TextView
+                android:layout_margin="@dimen/activity_margin_15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:padding="@dimen/activity_margin_5dp"
+                android:text="@string/cnfmMsg"
+                android:textColor="@color/black"
+                android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                android:textSize="@dimen/activity_margin_16sp" />
+
+
+            <LinearLayout
+                android:layout_marginStart="@dimen/activity_margin_15dp"
+                android:layout_marginEnd="@dimen/activity_margin_15dp"
+                android:id="@+id/mobileNumberLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/activity_margin_50dp"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:layout_marginRight="@dimen/activity_margin_10dp"
+                android:background="@drawable/rectborder"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="@dimen/activity_margin_60dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                    android:text="@string/_265"
+                    android:layout_marginLeft="@dimen/activity_margin_10dp"
+                    android:layout_marginRight="@dimen/activity_margin_5dp"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:textColor="@color/apptheme"
+                    android:textSize="@dimen/activity_margin_18dp" />
+
+                <EditText
+                    android:id="@+id/PhoneNumberField"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_margin_45dp"
+                    android:layout_gravity="center"
+                    android:autofillHints="phone"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:hint="@string/phHint"
+                    android:fontFamily="@font/latinotypeantartidaroundedmedium"
+                    android:maxLength="9"
+                    android:layout_marginRight="@dimen/activity_margin_10dp"
+                    android:paddingStart="@dimen/activity_margin_6dp"
+                    android:textSize="@dimen/activity_margin_18dp"
+                    tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_margin_30dp"
+                android:layout_marginRight="@dimen/activity_margin_27dp"
+                android:layout_marginLeft="@dimen/activity_margin_27dp"
+                android:layout_marginBottom="@dimen/activity_margin_80dp"
+                android:gravity="bottom"
+                android:layout_gravity="bottom">
+
+                <android.widget.Button
+                    android:id="@+id/sendotpbutton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_margin_10dp"
+                    android:background="@drawable/roundedbutton"
+                    android:padding="@dimen/activity_margin_6dp"
+                    android:text="@string/send_otp"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/activity_margin_20sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/apptheme" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

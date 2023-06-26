@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QrCodeScanner">
+
+    <SurfaceView
+        android:id="@+id/surfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_margin_15dp"
+            android:layout_marginTop="@dimen/activity_margin_80dp"
+            android:orientation="horizontal">
+
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageViewflasfoff"
+                    android:layout_width="@dimen/activity_margin_50dp"
+                    android:layout_height="@dimen/activity_margin_50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:visibility="gone"
+                    android:layout_marginRight="@dimen/activity_margin_15dp"
+                    android:src="@drawable/flashoff" />
+
+                <ImageView
+                    android:id="@+id/imageViewflason"
+                    android:layout_width="@dimen/activity_margin_50dp"
+                    android:layout_height="@dimen/activity_margin_50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="@dimen/activity_margin_15dp"
+                    android:src="@drawable/flashon" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/activity_margin_10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="@dimen/activity_margin_15dp"
+                android:text="@string/align_barcode"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_margin_18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/activity_margin_50dp">
+            <View
+                android:id="@+id/myrectangleview"
+                android:layout_width="@dimen/activity_margin_250dp"
+                android:layout_height="@dimen/activity_margin_250dp"
+                android:background="@drawable/img_qrcode"
+                android:padding="@dimen/activity_margin_0dp"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/activity_margin_20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/sienna" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/activity_margin_15dp"
+                android:layout_marginBottom="@dimen/activity_margin_20dp"
+                android:gravity="bottom|center_horizontal"
+                android:text="@string/scanning_terms"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_margin_18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

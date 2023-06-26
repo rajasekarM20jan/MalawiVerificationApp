@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Application de vérification de Malawi</string>
+    <string name="gps_not_enabled">La localisation GPS n\'est pas activée. Veuillez l\'activer</string>
+    <string name="noNetwork">Veuillez vérifier votre connexion réseau</string>
+    <string name="enter_phone">Entrez votre numéro de téléphone pour accéder à l\'application</string>
+    <string name="mobile_hint">XXX XXX XXX</string>
+    <string name="_265">+265</string>
+    <string name="send_otp">ENVOYER OTP</string>
+    <string name="otp_wait">Veuillez patienter, vous recevrez votre OTP dans</string>
+    <string name="_00_59">00:59</string>
+    <string name="resend_otp">RENVOYER OTP</string>
+    <string name="otp_not_received">Vous n\'avez pas reçu l\'OTP ? ESSAYER</string>
+    <string name="verify_otp">Vérifier OTP</string>
+    <string name="otp_sent">L\'OTP a été envoyé à votre numéro de mobile</string>
+    <string name="otp_verification">Vérification OTP</string>
+    <string name="verification_app_text">L\'application de vérification vous permet de vérifier instantanément votre police d\'assurance achetée</string>
+    <string name="vc_printCode">Vérifier le certificat - Code d\'impression</string>
+    <string name="vc_no_printCode">Vérifier le certificat - Sans code d\'impression</string>
+    <string name="vc_secure">Vérifier le certificat - Sécurisé</string>
+    <string name="verification_history">Historique de vérification</string>
+    <string name="or">(OU)</string>
+    <string name="login_police">Se connecter en tant que Police</string>
+    <string name="choose_login">Veuillez choisir votre option de connexion préférée pour procéder à la vérification du certificat.</string>
+    <string name="login_guest">Se connecter en tant qu\'invité</string>
+    <string name="align_barcode">Maintenez votre téléphone près du code-barres</string>
+    <string name="scanning_terms">La numérisation lira automatiquement le code QR dans les 30 secondes. Si ce n\'est pas le cas, veuillez cliquer sur l\'icône de saisie manuelle pour continuer.</string>
+    <string name="verify_certDetails">Veuillez vérifier les détails de votre certificat ci-dessous.</string>
+    <string name="certificate">Certificat #</string>
+    <string name="colon">:</string>
+    <string name="certNum">C22498189</string>
+    <string name="vehicle">Véhicule #</string>
+    <string name="vehNum">KCW558P</string>
+    <string name="ins_company">Compagnie d\'assurance</string>
+    <string name="kenyaOrient">Kenya Orient Insurance Company Ltd.</string>
+    <string name="chassis">Châssis #</string>
+    <string name="chNum">E11–728616</string>
+    <string name="policy_start">Date de début de la police d\'assurance</string>
+    <string name="date1">17/11/2020 00:00</string>
+    <string name="policy_end">Date de fin de la police d\'assurance</string>
+    <string name="date2">16/12/2020 23:59</string>
+    <string name="brand">Marque du véhicule</string>
+    <string name="nissan">NISSAN</string>
+    <string name="model">Modèle de véhicule</string>
+    <string name="modelName">NOTE</string>
+    <string name="cancelled_date">Date d\'annulation</string>
+    <string name="date3">17/11/2020 12:00</string>
+    <string name="cancel_reason">Motif d\'annulation</string>
+    <string name="reasonText">Auto-validation pour m\'assurer d\'avoir le bon certificat</string>
+    <string name="done">TERMINÉ</string>
+    <string name="insurance_company">Compagnie d\'assurance</string>
+    <string name="reg_ch_num">Numéro d\'immatriculation ou de châssis</string>
+    <string name="back">RETOUR</string>
+    <string name="verify">VÉRIFIER</string>
+    <string name="certNumber">Numéro de certificat</string>
+    <string name="enter_mobile_num">Veuillez entrer le numéro de mobile avant de continuer</string>
+    <string name="OK">OK</string>
+    <string name="enter_otp">Veuillez entrer le code OTP (One Time Password) avant de continuer.</string>
+    <string name="timer">00:</string>
+    <string name="timer2">00:0</string>
+    <string name="exit_alert">Êtes-vous sûr de vouloir quitter l\'application ?</string>
+    <string name="registerNumAlert">Veuillez fournir votre numéro d\'immatriculation ou de châssis avant de procéder à la vérification</string>
+    <string name="certNumAlert">Veuillez fournir le numéro de certificat avant de procéder à la vérification</string>
+    <string name="insuranceAlert">Veuillez sélectionner une compagnie d\'assurance avant de procéder à la vérification</string>
+    <string name="verifyResult">Résultat de la vérification</string>
+    <string name="session_expired">Votre session a expiré. Veuillez vous connecter à nouveau pour continuer</string>
+
+    <string name="chassisNum">Numéro de châssis</string>
+    <string name="regNum">Numéro d\'immatriculation</string>
+    <string name="cmn_wrong_msg">Une erreur inattendue s\'est produite.</string>
+    <string name="vcCert">Vérifier avec le certificat</string>
+    <string name="verificationCert">Vérifier avec le certificat</string>
+    <string name="status">Statut du certificat</string>
+    <string name="statVal">À venir</string>
+    <string name="auth_phrase">Validation simplifiée pour les utilisateurs autorisés : rapide, sans effort et précise !</string>
+    <string name="engine">Numéro de moteur</string>
+    <string name="toc">Type de couverture</string>
+    <string name="comprehensive">Complète</string>
+    <string-array name="insuranceSpinnerArray">
+        <item>--Select--</item>
+        <item>NICO</item>
+        <item>BRITAM</item>
+        <item>Reunion</item>
+        <item>LIBERTAS</item>
+        <item>UGI</item>
+        <item>CIC</item>
+        <item>PRIME</item>
+        <item>REUNION</item>
+        <item>GA</item>
+        <item>CIRCA</item>
+        <item>EPRIME</item>
+        <item>MYREUNION</item>
+        <item>GARA</item>
+    </string-array>
+</resources>

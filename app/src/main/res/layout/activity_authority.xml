@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Authority">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin_30dp"
+        android:text="@string/certVer"
+        android:fontFamily="@font/latinotypeantartidaroundedmedium"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/activity_margin_24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_margin_15dp"
+        android:text="@string/choose_login"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/activity_margin_17sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/dmvicloginphoto"
+            android:layout_width="@dimen/activity_margin_150dp"
+            android:layout_height="@dimen/activity_margin_220dp"
+            android:layout_marginTop="@dimen/activity_margin_15dp"
+            android:layout_marginBottom="@dimen/activity_margin_15dp"
+            android:src="@drawable/app_logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        </ImageView>
+        <ImageView
+            android:id="@+id/switchLanguageIcon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/apptheme"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="@dimen/activity_margin_15dp"
+            android:layout_width="@dimen/activity_margin_40dp"
+            android:layout_height="@dimen/activity_margin_40dp"
+            android:visibility="gone"
+            android:layout_marginEnd="@dimen/activity_margin_20dp"
+            android:src="@drawable/language2"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:layout_marginBottom="@dimen/activity_margin_20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_margin_20dp"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/BtnLoginPolice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_10dp"
+                android:background="@drawable/roundedbutton"
+                android:padding="@dimen/activity_margin_6dp"
+                android:text="@string/login_police"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_margin_20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/apptheme" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/or"
+            android:textSize="@dimen/activity_margin_25sp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/activity_margin_8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_margin_20dp"
+            android:orientation="horizontal">
+
+            <android.widget.Button
+                android:id="@+id/BtnLoginGuest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_margin_0dp"
+                android:background="@drawable/roundedbutton"
+                android:padding="@dimen/activity_margin_6dp"
+                android:text="@string/login_guest"
+                android:textColor="@color/white"
+                android:textSize="@dimen/activity_margin_20sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/apptheme" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

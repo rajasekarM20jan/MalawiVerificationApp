@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerificationResultOld">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_marginBottom="@dimen/activity_margin_80dp"
+        android:isScrollContainer="true">
+
+        <LinearLayout
+            android:id="@+id/successlinearid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_margin_20dp"
+                android:layout_marginEnd="@dimen/activity_margin_20dp"
+                android:layout_marginTop="@dimen/activity_margin_20dp"
+                android:layout_gravity="center">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/activity_margin_150dp"
+                    android:id="@+id/statusImage"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/dmviccertificate"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_margin_40dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/activity_margin_350dp"
+                        android:layout_height="@dimen/activity_margin_40dp"
+                        android:layout_marginTop="@dimen/activity_margin_0dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtVehicle"
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="@dimen/activity_margin_80dp"
+                            android:layout_weight="1"
+                            android:paddingStart="@dimen/activity_margin_10dp"
+                            android:text="@string/vehicle"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/colonVehicle"
+                            android:layout_width="@dimen/activity_margin_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/colon"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtVehicleVal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/vehNum" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/activity_margin_350dp"
+                        android:layout_height="@dimen/activity_margin_40dp"
+                        android:layout_marginTop="@dimen/activity_margin_0dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtChassis"
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="@dimen/activity_margin_80dp"
+                            android:layout_weight="1"
+                            android:paddingStart="@dimen/activity_margin_10dp"
+                            android:text="@string/chassis"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/colonChassis"
+                            android:layout_width="@dimen/activity_margin_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/colon"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtChassisVal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/chNum" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/activity_margin_350dp"
+                        android:layout_height="@dimen/activity_margin_40dp"
+                        android:layout_marginTop="@dimen/activity_margin_0dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtEngine"
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="@dimen/activity_margin_80dp"
+                            android:layout_weight="1"
+                            android:paddingStart="@dimen/activity_margin_10dp"
+                            android:text="@string/engine"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/coloncertificate"
+                            android:layout_width="@dimen/activity_margin_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/colon"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtEngineVal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/certNum" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </TableRow>
+
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/activity_margin_350dp"
+                        android:layout_height="@dimen/activity_margin_40dp"
+                        android:layout_marginTop="@dimen/activity_margin_0dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtToc"
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="@dimen/activity_margin_80dp"
+                            android:layout_weight="1"
+                            android:paddingStart="@dimen/activity_margin_10dp"
+                            android:text="@string/toc"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/colonInsucmpny"
+                            android:layout_width="@dimen/activity_margin_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/colon"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtTocVal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/comprehensive" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </TableRow>
+
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/activity_margin_350dp"
+                        android:layout_height="@dimen/activity_margin_40dp"
+                        android:layout_marginTop="@dimen/activity_margin_0dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtpolicystdt"
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="@dimen/activity_margin_80dp"
+                            android:layout_weight="1"
+                            android:paddingStart="@dimen/activity_margin_10dp"
+                            android:text="@string/policy_start"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/colonpolicystdt"
+                            android:layout_width="@dimen/activity_margin_0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/colon"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="@dimen/activity_margin_100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtpolicystdtval"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/date1" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </TableRow>
+
+
+                <LinearLayout
+                    android:id="@+id/linearcancelid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/activity_margin_350dp"
+                            android:layout_height="@dimen/activity_margin_40dp"
+                            android:layout_marginTop="@dimen/activity_margin_0dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtcanceldt"
+                                android:layout_width="@dimen/activity_margin_100dp"
+                                android:layout_height="@dimen/activity_margin_80dp"
+                                android:layout_weight="1"
+                                android:paddingStart="@dimen/activity_margin_10dp"
+                                android:text="@string/cancelled_date"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/activity_margin_14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/coloncanceldt"
+                                android:layout_width="@dimen/activity_margin_0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/colon"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/activity_margin_14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="@dimen/activity_margin_100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtcanceldtval"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/date3" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/activity_margin_350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/activity_margin_0dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txtcancelres"
+                                android:layout_width="@dimen/activity_margin_100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:paddingStart="@dimen/activity_margin_10dp"
+                                android:text="@string/cancel_reason"
+                                android:textAlignment="textStart"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/activity_margin_14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/coloncancelres"
+                                android:layout_width="@dimen/activity_margin_0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/colon"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/activity_margin_14sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="@dimen/activity_margin_100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtcancelresval"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/reasonText" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </TableRow>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/activity_margin_20dp"
+        android:orientation="horizontal">
+
+        <android.widget.Button
+            android:id="@+id/doneButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_margin_10dp"
+            android:background="@drawable/roundedbutton"
+            android:padding="@dimen/activity_margin_6dp"
+            android:text="@string/done"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_margin_20sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/apptheme" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
