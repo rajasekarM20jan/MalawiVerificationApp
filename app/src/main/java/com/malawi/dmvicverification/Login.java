@@ -43,8 +43,7 @@ public class Login extends AppCompatActivity {
     EditText PhoneNumberField;
     Button sendOtpButton;
     Context context;
-    ImageView dmvicloginphoto1;
-    public static String mobileNumber;
+    public static String mobileNumber,phoneNumberWithCode;
     ProgressDialog p;
     ConstraintLayout constraintLayout;
 
@@ -63,7 +62,6 @@ public class Login extends AppCompatActivity {
     }
     void init(){
         try{
-            constraintLayout=findViewById(R.id.constraintLayout);
             PhoneNumberField=findViewById(R.id.PhoneNumberField);
             sendOtpButton=findViewById(R.id.sendotpbutton);
             basicFunction();
@@ -75,9 +73,11 @@ public class Login extends AppCompatActivity {
         try{
             sendOtpButton.setOnClickListener(l->{
                 try{
-                    if(PhoneNumberField.length()==10){  //as of now given the mobile number to ten digits. Have to get the detail about what will be the number of digits
-                        /*startActivity(new Intent(context,LoginOTP.class));*/
+                    if(PhoneNumberField.length()==9){  //as of now given the mobile number to ten digits. Have to get the detail about what will be the number of digits
+
+                        phoneNumberWithCode="+265"+PhoneNumberField.getText().toString().trim();
                         mobileNumber=PhoneNumberField.getText().toString().trim();
+                        /*startActivity(new Intent(context,LoginOTP.class));*/
                         sendOTP();
                     }else{
                         alertTheUser(context,"",getString(R.string.enter_mobile_num))

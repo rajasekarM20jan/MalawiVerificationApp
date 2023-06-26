@@ -46,13 +46,12 @@ import okhttp3.RequestBody;
 import okhttp3.Response;
 
 public class LoginOTP extends AppCompatActivity {
-    TextView txtotptimer,txtresendotp;
+    TextView txtotptimer,txtresendotp,mobileNumberTextField,numberRetype;
     Button btnVerifyOtp;
     Context context;
     EditText otpEditText1 ,otpEditText2,otpEditText3,otpEditText4,otpEditText5,otpEditText6;
     ProgressDialog p;
     LinearLayout OTPSeconds,resendLayout;
-    ConstraintLayout constraintLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         loadlocale(this);
@@ -70,7 +69,8 @@ public class LoginOTP extends AppCompatActivity {
 
     void init(){
         try{
-            constraintLayout=findViewById(R.id.constraintLayout);
+            numberRetype=findViewById(R.id.numberRetype);
+            mobileNumberTextField=findViewById(R.id.mobileNumberTextField);
             btnVerifyOtp=findViewById(R.id.BtnVerifyotp);
             txtotptimer=findViewById(R.id.txtotptimer);
             OTPSeconds =findViewById(R.id.OTPseconds);
@@ -82,6 +82,7 @@ public class LoginOTP extends AppCompatActivity {
             otpEditText4 = findViewById(R.id.otp_edit_text_4);
             otpEditText5 = findViewById(R.id.otp_edit_text_5);
             otpEditText6 = findViewById(R.id.otp_edit_text_6);
+
             basicFunctions();
         }catch (Exception e){
             e.printStackTrace();
@@ -91,6 +92,16 @@ public class LoginOTP extends AppCompatActivity {
     void basicFunctions(){
         try{
 
+            mobileNumberTextField.setText(Login.phoneNumberWithCode);
+            numberRetype.setOnClickListener(l->onBackPressed());
+            String otp=Login.otp;
+            System.out.println("OTP is: "+otp);
+            otpEditText1.setText(String.valueOf(otp.charAt(0)));
+            otpEditText2.setText(String.valueOf(otp.charAt(1)));
+            otpEditText3.setText(String.valueOf(otp.charAt(2)));
+            otpEditText4.setText(String.valueOf(otp.charAt(3)));
+            otpEditText5.setText(String.valueOf(otp.charAt(4)));
+            otpEditText6.setText(String.valueOf(otp.charAt(5)));
             otpEditText1.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -705,6 +716,7 @@ public class LoginOTP extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
+            startActivity(new Intent(context,Login.class));
             finish();
         }catch (Exception e){
             e.printStackTrace();

@@ -82,13 +82,10 @@
 
 
             <LinearLayout
-                android:layout_marginStart="@dimen/activity_margin_15dp"
-                android:layout_marginEnd="@dimen/activity_margin_15dp"
                 android:id="@+id/mobileNumberLayout"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/activity_margin_50dp"
-                android:layout_marginTop="@dimen/activity_margin_10dp"
-                android:layout_marginRight="@dimen/activity_margin_10dp"
+                android:layout_margin="@dimen/activity_margin_15dp"
                 android:background="@drawable/rectborder"
                 android:gravity="center_vertical"
                 android:orientation="horizontal">

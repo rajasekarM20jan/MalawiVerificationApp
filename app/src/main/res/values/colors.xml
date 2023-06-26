@@ -14,4 +14,5 @@
     <color name="grey">#989898</color>
     <color name="darkgrey">#A9A9A9</color>
     <color name="sienna">#D9823F</color>
+    <color name="border_red">#CDDA4646</color>
 </resources>
