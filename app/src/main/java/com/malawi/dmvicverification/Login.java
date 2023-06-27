@@ -75,7 +75,7 @@ public class Login extends AppCompatActivity {
                 try{
                     if(PhoneNumberField.length()==9){  //as of now given the mobile number to ten digits. Have to get the detail about what will be the number of digits
 
-                        phoneNumberWithCode="+265"+PhoneNumberField.getText().toString().trim();
+                        phoneNumberWithCode="+265 "+PhoneNumberField.getText().toString().trim();
                         mobileNumber=PhoneNumberField.getText().toString().trim();
                         /*startActivity(new Intent(context,LoginOTP.class));*/
                         sendOTP();

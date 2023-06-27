@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Application de vérification de Malawi</string>
     <string name="gps_not_enabled">La localisation GPS n\'est pas activée. Veuillez l\'activer</string>
     <string name="noNetwork">Veuillez vérifier votre connexion réseau</string>
     <string name="enter_phone">Entrez votre numéro de téléphone pour accéder à l\'application</string>

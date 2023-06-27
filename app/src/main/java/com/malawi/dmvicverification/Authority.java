@@ -299,7 +299,11 @@ public class Authority extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            finishAffinity();
+            MainActivity.alertTheUser(context,"","Are you sure you want to exit the app?")
+                    .setCancelable(false)
+                    .setNegativeButton("Yes",((dialogInterface, i) -> finishAffinity()))
+                    .setPositiveButton("No",((dialogInterface, i) -> dialogInterface.dismiss()))
+                    .show();
         }catch (Exception e){
             e.printStackTrace();
         }

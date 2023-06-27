@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TermsPage">
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/acceptTerms"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_margin_50dp"
+        android:background="@drawable/terms_button"
+        android:text="I Agree to Terms and Conditions"
+        android:fontFamily="@font/latinotypeantartidaroundedmedium"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="@dimen/activity_margin_14sp"
+        android:layout_marginTop="@dimen/activity_margin_10dp"
+        android:layout_marginBottom="@dimen/activity_margin_20dp"
+        android:layout_marginEnd="@dimen/activity_margin_20dp"
+        android:layout_marginStart="@dimen/activity_margin_20dp"/>
+
+
+
+</LinearLayout>

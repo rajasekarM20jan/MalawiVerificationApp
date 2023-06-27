@@ -99,10 +99,12 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
             DataBaseHelper mydb = new DataBaseHelper(context);
             if (mydb.getTokenDetails().getCount() == 0) {
-                startActivity(new Intent(context,Authority.class));
+                startActivity(new Intent(context,LandingPage.class));
             }else {
                 startActivity(new Intent(context,Dashboard.class));
             }
+
+
 
         }catch (Exception e){
             e.printStackTrace();

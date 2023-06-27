@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MalawiVerificationApp</string>
     <string name="gps_not_enabled">A localização GPS não está ativada. Por favor, ative-a</string>
     <string name="noNetwork">Por favor, verifique a sua conexão de rede</string>
     <string name="enter_phone">Digite o seu número de telefone para acessar o aplicativo</string>
