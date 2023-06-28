@@ -14,7 +14,10 @@ import static com.malawi.dmvicverification.MainActivity.validFrom;
 import static com.malawi.dmvicverification.MainActivity.vehicleRegNum;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -23,10 +26,17 @@ import android.content.res.ColorStateList;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.util.Log;
+import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -36,7 +46,11 @@ import com.google.gson.JsonObject;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.MediaType;
@@ -53,13 +67,14 @@ public class VerificationHistory extends AppCompatActivity {
     TextView noRecordsTextView;
     Context context;
     ProgressDialog p;
+    ImageView menuIcon;
+    String fromDate,tillDate;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verification_history);
         context=this;
         try {
-
             getSupportActionBar().setTitle(getString(R.string.verification_history));
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         } catch (Exception ex) {
@@ -72,6 +87,7 @@ public class VerificationHistory extends AppCompatActivity {
         try{
             noRecordsTextView=findViewById(R.id.noRecordsTextView);
             verificationListView=findViewById(R.id.verificationListView);
+            menuIcon=findViewById(R.id.menuIcon);
             basicFunctions();
         }catch (Exception e){
             e.printStackTrace();
@@ -80,17 +96,47 @@ public class VerificationHistory extends AppCompatActivity {
 
     void basicFunctions(){
         try{
-            verificationHistoryList=new ArrayList<>();
-            verificationHistoryList.add(new HistoryModel("AD45635","ASETETEGDGDB5"));
-            verificationHistoryList.add(new HistoryModel("BE25801","ASETETEGDGDB5"));
-            historyAdapter=new HistoryAdapter(context,verificationHistoryList);
-            verificationListView.setAdapter(historyAdapter);
+            Calendar cal=Calendar.getInstance();
+            String pattern = "dd-MMM-yyyy";
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+            tillDate=simpleDateFormat.format(cal.getTime());
+            Calendar cal2=Calendar.getInstance();
+            cal2.add(Calendar.DAY_OF_YEAR, -7);
+            fromDate=simpleDateFormat.format(cal2.getTime());
+            System.out.println("FromDate: "+fromDate+" TillDate: "+tillDate);
+            menuIcon.setOnClickListener(l->{
+                LayoutInflater inflater=LayoutInflater.from(context);
+                View v=inflater.inflate(R.layout.datefilterdialog,null,false);
+                Dialog d=new Dialog(context);
+                d.setContentView(v);
+                TextView startDate,endDate;
+                Button searchButton;
+                startDate=v.findViewById(R.id.startDate);
+                endDate=v.findViewById(R.id.endDate);
+                searchButton=v.findViewById(R.id.searchButton);
+                startDate.setText(fromDate);
+                endDate.setText(tillDate);
+                startDate.setOnClickListener(m->DatePickerFunction(startDate,fromDate));
+                endDate.setOnClickListener(m->DatePickerFunction(endDate,tillDate));
+                searchButton.setOnClickListener(m->{
+                    fromDate=startDate.getText().toString();
+                    tillDate=endDate.getText().toString();
+                    System.out.println("FromDate2: "+fromDate+" TillDate2: "+tillDate);
+                    getHistory();
+                    d.dismiss();
+                });
+                d.getWindow().setLayout(WindowManager.LayoutParams.MATCH_PARENT,WindowManager.LayoutParams.WRAP_CONTENT);
+                d.create();
+                d.show();
+            });
+            getHistory();
+
         }catch (Exception e){
             e.printStackTrace();
         }
     }
 
-    void verifyCertificate() {
+    void getHistory() {
         try {
             if (isNetworkConnected(context)) {
                 if (checkGPSStatus(context)) {
@@ -122,9 +168,11 @@ public class VerificationHistory extends AppCompatActivity {
                                 }
                             }
                         });
-                        String postUrl = getString(R.string.base_url)+"/api/digital/core/CertificateVerification/ValidateExistingCertificate";
+                        String postUrl = getString(R.string.base_url)+"/api/digital/core/CertificateVerification/FetchVerificationHistoryByDeviceID";
                         final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                         JsonObject Details = new JsonObject();
+                        Details.addProperty("fromDate",fromDate);
+                        Details.addProperty("tillDate",tillDate);
                         String insertString = Details.toString();
                         RequestBody body = RequestBody.create(JSON, insertString);
                         Request request = new Request.Builder()
@@ -155,6 +203,25 @@ public class VerificationHistory extends AppCompatActivity {
                                         try{
                                             if(p.isShowing()){
                                                 p.dismiss();
+                                            }
+                                            verificationHistoryList=new ArrayList<>();
+                                            JSONArray historyArray=staticJsonObj.getJSONObject("rObj").getJSONArray("VerificationHistoryOrg");
+                                            if(historyArray.length()>0) {
+                                                for (int i = 0; i < historyArray.length(); i++) {
+                                                    JSONObject historyObj = historyArray.getJSONObject(i);
+                                                    String RegNo, ChaNo, certNo, status;
+                                                    RegNo = historyObj.getString("vehRegnNumber");
+                                                    ChaNo = historyObj.getString("vehChassisNumber");
+                                                    certNo = historyObj.getString("certificateNumber");
+                                                    status = historyObj.getString("custom5");
+                                                    verificationHistoryList.add(new HistoryModel(RegNo, ChaNo, certNo, status));
+                                                }
+                                                noRecordsTextView.setVisibility(View.GONE);
+                                                historyAdapter = new HistoryAdapter(context, verificationHistoryList);
+                                                verificationListView.setAdapter(historyAdapter);
+                                            }else if(historyArray.length()==0){
+                                                verificationListView.setVisibility(View.GONE);
+                                                noRecordsTextView.setVisibility(View.VISIBLE);
                                             }
                                         }catch (Exception e){
                                             e.printStackTrace();
@@ -280,6 +347,43 @@ public class VerificationHistory extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    //to create time picker dialog for policy start date
+    private void DatePickerFunction(TextView tv,String selectedDate) {
+        try {
+            // Declaring DatePicker dialog box.
+            DatePickerDialog datePickerDialog = null;
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                datePickerDialog = new DatePickerDialog(context);
+            }
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                DateFormat dateFormat = new SimpleDateFormat("dd-MMM-yyyy");
+
+                Date selDate=dateFormat.parse(selectedDate);
+
+                // Get the year, month, and day from the Date object
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTime(selDate);
+                int yy = calendar.get(Calendar.YEAR);
+                int mm = calendar.get(Calendar.MONTH);
+                int dd = calendar.get(Calendar.DAY_OF_MONTH);
+                datePickerDialog.updateDate(yy,mm,dd);
+                datePickerDialog.setOnDateSetListener((datePicker, year, month, date) -> {
+                    Calendar policyStartDateCalender = Calendar.getInstance();
+                    policyStartDateCalender.set(year, month, date);
+                    String pattern = "dd-MMM-yyyy";
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+                    String formatDate = simpleDateFormat.format(policyStartDateCalender.getTime());
+                    tv.setText(formatDate);
+                });
+            }
+            // Showing the date picker to the user.
+
+            datePickerDialog.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

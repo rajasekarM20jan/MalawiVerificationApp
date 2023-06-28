@@ -89,6 +89,8 @@
     <string name="skip">SKIP</string>
     <string name="prev"><![CDATA[<Previous]]></string>
     <string name="next"><![CDATA[Next>]]></string>
+    <string name="cerNo">Certificate #</string>
+    <string name="stat">Status</string>
     <string-array name="insuranceSpinnerArray">
         <item>--Select--</item>
         <item>NICO</item>

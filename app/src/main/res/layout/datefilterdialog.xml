@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/activity_margin_10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin_20dp"
+        android:layout_marginStart="@dimen/activity_margin_20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/latinotypeantartidaroundedmedium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/activity_margin_20sp"
+        android:text="From:"
+        />
+    <TextView
+        android:id="@+id/startDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_margin_50dp"
+        android:layout_margin="@dimen/activity_margin_20dp"
+        android:text="Enter a Date"
+        android:gravity="center_vertical"
+        android:padding="@dimen/activity_margin_10dp"
+        android:background="@drawable/rectborder"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_margin_20dp"
+        android:layout_marginStart="@dimen/activity_margin_20dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/latinotypeantartidaroundedmedium"
+        android:textColor="@color/black"
+        android:textSize="@dimen/activity_margin_20sp"
+        android:text="Till:"
+        />
+    <TextView
+        android:id="@+id/endDate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/activity_margin_50dp"
+        android:layout_margin="@dimen/activity_margin_20dp"
+        android:text="Enter a Date"
+        android:gravity="center_vertical"
+        android:padding="@dimen/activity_margin_10dp"
+        android:background="@drawable/rectborder"
+        />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/activity_margin_15dp"
+        android:text="search"/>
+
+</LinearLayout>

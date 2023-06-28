@@ -8,86 +8,133 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/activity_margin_10dp"
-        app:cardElevation="@dimen/activity_margin_12dp">
+        android:layout_margin="@dimen/activity_margin_5dp"
+        app:cardCornerRadius="@dimen/activity_margin_20dp"
+        app:cardElevation="@dimen/activity_margin_7dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:weightSum="10">
-
-            <LinearLayout
-                android:layout_width="@dimen/activity_margin_120dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/activity_margin_10dp"
-                    android:fontFamily="serif"
-                    android:text="@string/vehicle"
-                    android:textColor="@color/apptheme"
-                    android:textSize="@dimen/activity_margin_14dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/activity_margin_10dp"
-                    android:fontFamily="serif"
-                    android:text="@string/chassis"
-                    android:textColor="@color/apptheme"
-                    android:textSize="@dimen/activity_margin_14dp"
-                    android:textStyle="bold" />
-
-            </LinearLayout>
+            android:padding="@dimen/activity_margin_2dp"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_weight="10"
-                android:orientation="vertical">
+                android:paddingStart="@dimen/activity_margin_10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
 
                 <TextView
-                    android:id="@+id/intimationValue"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/activity_margin_10dp"
+                    android:layout_margin="@dimen/activity_margin_5dp"
                     android:fontFamily="serif"
+                    android:text="@string/vehicle"
+                    android:layout_weight="1"
+                    android:textColor="@color/apptheme"
+                    android:textSize="@dimen/activity_margin_14dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/regValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_margin_5dp"
+                    android:fontFamily="serif"
+                    android:layout_weight="1"
                     android:text="@string/vehNum"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="@dimen/activity_margin_12dp" />
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:paddingStart="@dimen/activity_margin_10dp"
+                android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/reqValue"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="@dimen/activity_margin_10dp"
+                    android:layout_margin="@dimen/activity_margin_5dp"
                     android:fontFamily="serif"
+                    android:layout_weight="1"
+                    android:text="@string/chassis"
+                    android:textColor="@color/apptheme"
+                    android:textSize="@dimen/activity_margin_14dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/chaValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_margin_5dp"
+                    android:fontFamily="serif"
+                    android:layout_weight="1"
                     android:text="@string/chNum"
                     android:textColor="@color/black"
                     android:textStyle="bold"
                     android:textSize="@dimen/activity_margin_12dp" />
-
-
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="@dimen/activity_margin_10dp"
-                android:gravity="center">
+                android:paddingStart="@dimen/activity_margin_10dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_margin_5dp"
+                    android:fontFamily="serif"
+                    android:layout_weight="1"
+                    android:text="@string/cerNo"
+                    android:textColor="@color/apptheme"
+                    android:textSize="@dimen/activity_margin_14dp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:id="@+id/certNoVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_margin_5dp"
+                    android:fontFamily="serif"
+                    android:layout_weight="1"
+                    android:text="@string/certNum"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/activity_margin_12dp" />
+            </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/viewDetails"
-                    android:layout_width="@dimen/activity_margin_30dp"
-                    app:tint="@color/apptheme"
-                    android:layout_height="@dimen/activity_margin_30dp"
-                    android:src="@drawable/eye" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="2"
+                android:paddingStart="@dimen/activity_margin_10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/activity_margin_5dp"
+                    android:fontFamily="serif"
+                    android:layout_weight="1"
+                    android:text="@string/stat"
+                    android:textColor="@color/apptheme"
+                    android:textSize="@dimen/activity_margin_14dp"
+                    android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/statusVal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="@dimen/activity_margin_5dp"
+                    android:fontFamily="serif"
+                    android:text="@string/vehNum"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/activity_margin_12dp" />
             </LinearLayout>
 
         </LinearLayout>

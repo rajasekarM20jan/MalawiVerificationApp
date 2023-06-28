@@ -3,9 +3,6 @@ package com.malawi.dmvicverification;
 
 
 import android.content.Context;
-import android.content.Intent;
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,9 +40,10 @@ public class HistoryAdapter extends ArrayAdapter<HistoryModel> {
             LayoutInflater inflater = LayoutInflater.from(getContext());
             convertView = inflater.inflate(R.layout.custom_history_layout, parent, false);
             // Initializing the required variables.
-            viewHolder.vehicleNo = convertView.findViewById(R.id.intimationValue);
-            viewHolder.chaNum = convertView.findViewById(R.id.reqValue);
-            viewHolder.viewDetails = convertView.findViewById(R.id.viewDetails);
+            viewHolder.vehicleNo = convertView.findViewById(R.id.regValue);
+            viewHolder.chaNum = convertView.findViewById(R.id.chaValue);
+            viewHolder.certNoVal = convertView.findViewById(R.id.certNoVal);
+            viewHolder.statusVal = convertView.findViewById(R.id.statusVal);
             // Cache the viewHolder object inside the fresh view
             convertView.setTag(viewHolder);
         } else {
@@ -55,19 +53,32 @@ public class HistoryAdapter extends ArrayAdapter<HistoryModel> {
 
         try {
             // Setting the model class values to the view.
-            viewHolder.vehicleNo.setText(item.getRegNo());
-            viewHolder.chaNum.setText(item.getChaNo());
+            String regNo,chaNo,certNo,status;
+            if(item.getRegNo().equals("null")|| item.getRegNo() == null){
+                regNo="N/A";
+            }else{
+                regNo= item.getRegNo();
+            }
+            if(item.getChaNo().equals("null")|| item.getChaNo() == null){
+                chaNo="N/A";
+            }else{
+                chaNo= item.getChaNo();
+            }
+            if(item.getCertNo().equals("null")|| item.getCertNo() == null){
+                certNo="N/A";
+            }else{
+                certNo= item.getCertNo();
+            }
+            if(item.getStatus().equals("null")|| item.getStatus() == null){
+                status="N/A";
+            }else{
+                status= item.getStatus();
+            }
+            viewHolder.vehicleNo.setText(regNo);
+            viewHolder.chaNum.setText(chaNo);
+            viewHolder.certNoVal.setText(certNo);
+            viewHolder.statusVal.setText(status);
 
-            // OnClick of an item forward to verify claim page.
-            viewHolder.viewDetails.setOnClickListener(onClickViewDetails ->{
-                try {
-
-                    //redirection of the page to next respective page
-
-                }catch (Exception e){
-                    e.printStackTrace();
-                }
-            });
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -78,8 +89,7 @@ public class HistoryAdapter extends ArrayAdapter<HistoryModel> {
     public static class ViewHolder {
         // Declaring the variables.
         TextView vehicleNo;
-        TextView chaNum;
-        ImageView viewDetails;
+        TextView chaNum,certNoVal,statusVal;
     }
 
 

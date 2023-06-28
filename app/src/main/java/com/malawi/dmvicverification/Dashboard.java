@@ -137,8 +137,8 @@ public class Dashboard extends AppCompatActivity {
         try{
             alertTheUser(context,"",getString(R.string.exit_alert))
                     .setCancelable(false)
-                    .setNegativeButton("No",(dialogInterface, i) -> dialogInterface.dismiss())
-                    .setPositiveButton("Yes",(dialogInterface, i) -> {
+                    .setPositiveButton("No",(dialogInterface, i) -> dialogInterface.dismiss())
+                    .setNegativeButton("Yes",(dialogInterface, i) -> {
                         dialogInterface.dismiss();
                         finishAffinity();
                     }).show();

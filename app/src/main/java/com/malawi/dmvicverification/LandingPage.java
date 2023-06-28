@@ -1,5 +1,7 @@
 package com.malawi.dmvicverification;
 
+import static com.malawi.dmvicverification.MainActivity.alertTheUser;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -138,12 +140,14 @@ public class LandingPage extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        try {
-            MainActivity.alertTheUser(context,"","Are you sure you want to exit the app?")
+        try{
+            alertTheUser(context,"",getString(R.string.exit_alert))
                     .setCancelable(false)
-                    .setNegativeButton("Yes",((dialogInterface, i) -> finishAffinity()))
-                    .setPositiveButton("No",((dialogInterface, i) -> dialogInterface.dismiss()))
-                    .show();
+                    .setPositiveButton("No",(dialogInterface, i) -> dialogInterface.dismiss())
+                    .setNegativeButton("Yes",(dialogInterface, i) -> {
+                        dialogInterface.dismiss();
+                        finishAffinity();
+                    }).show();
         }catch (Exception e){
             e.printStackTrace();
         }
