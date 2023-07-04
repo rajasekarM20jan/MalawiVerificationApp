@@ -217,6 +217,7 @@ public class VerificationHistory extends AppCompatActivity {
                                                     verificationHistoryList.add(new HistoryModel(RegNo, ChaNo, certNo, status));
                                                 }
                                                 noRecordsTextView.setVisibility(View.GONE);
+                                                verificationListView.setVisibility(View.VISIBLE);
                                                 historyAdapter = new HistoryAdapter(context, verificationHistoryList);
                                                 verificationListView.setAdapter(historyAdapter);
                                             }else if(historyArray.length()==0){
