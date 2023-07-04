@@ -116,8 +116,8 @@ public class VerificationHistory extends AppCompatActivity {
                 searchButton=v.findViewById(R.id.searchButton);
                 startDate.setText(fromDate);
                 endDate.setText(tillDate);
-                startDate.setOnClickListener(m->DatePickerFunction(startDate,fromDate,tillDate,"fromDate"));
-                endDate.setOnClickListener(m->DatePickerFunction(endDate,tillDate,tillDate,"tillDate"));
+                startDate.setOnClickListener(m->DatePickerFunction(startDate,fromDate,"fromDate"));
+                endDate.setOnClickListener(m->DatePickerFunction(endDate,tillDate,"tillDate"));
                 searchButton.setOnClickListener(m->{
                     fromDate=startDate.getText().toString();
                     tillDate=endDate.getText().toString();
@@ -351,7 +351,7 @@ public class VerificationHistory extends AppCompatActivity {
     }
 
     //to create time picker dialog for policy start date
-    private void DatePickerFunction(TextView tv,String selectedDate,String endDate,String type) {
+    private void DatePickerFunction(TextView tv,String selectedDate,String type) {
         try {
             // Declaring DatePicker dialog box.
             DatePickerDialog datePickerDialog = null;
