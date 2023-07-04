@@ -116,8 +116,8 @@ public class VerificationHistory extends AppCompatActivity {
                 searchButton=v.findViewById(R.id.searchButton);
                 startDate.setText(fromDate);
                 endDate.setText(tillDate);
-                startDate.setOnClickListener(m->DatePickerFunction(startDate,fromDate));
-                endDate.setOnClickListener(m->DatePickerFunction(endDate,tillDate));
+                startDate.setOnClickListener(m->DatePickerFunction(startDate,fromDate,tillDate,"fromDate"));
+                endDate.setOnClickListener(m->DatePickerFunction(endDate,tillDate,tillDate,"tillDate"));
                 searchButton.setOnClickListener(m->{
                     fromDate=startDate.getText().toString();
                     tillDate=endDate.getText().toString();
@@ -350,7 +350,7 @@ public class VerificationHistory extends AppCompatActivity {
     }
 
     //to create time picker dialog for policy start date
-    private void DatePickerFunction(TextView tv,String selectedDate) {
+    private void DatePickerFunction(TextView tv,String selectedDate,String endDate,String type) {
         try {
             // Declaring DatePicker dialog box.
             DatePickerDialog datePickerDialog = null;
@@ -368,6 +368,18 @@ public class VerificationHistory extends AppCompatActivity {
                 int yy = calendar.get(Calendar.YEAR);
                 int mm = calendar.get(Calendar.MONTH);
                 int dd = calendar.get(Calendar.DAY_OF_MONTH);
+                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
+                if(type.equals("tillDate")){
+                    Date dt=dateFormat.parse(fromDate);
+                    Calendar cl=Calendar.getInstance();
+                    cl.setTime(dt);
+                    datePickerDialog.getDatePicker().setMinDate(cl.getTimeInMillis());
+                }else if(type.equals("fromDate")){
+                    Date dt=dateFormat.parse(tillDate);
+                    Calendar cl=Calendar.getInstance();
+                    cl.setTime(dt);
+                    datePickerDialog.getDatePicker().setMaxDate(cl.getTimeInMillis());
+                }
                 datePickerDialog.updateDate(yy,mm,dd);
                 datePickerDialog.setOnDateSetListener((datePicker, year, month, date) -> {
                     Calendar policyStartDateCalender = Calendar.getInstance();
@@ -376,6 +388,11 @@ public class VerificationHistory extends AppCompatActivity {
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
                     String formatDate = simpleDateFormat.format(policyStartDateCalender.getTime());
                     tv.setText(formatDate);
+                    if(type.equals("tillDate")){
+                        tillDate=formatDate;
+                    }else if(type.equals("fromDate")){
+                        fromDate=formatDate;
+                    }
                 });
             }
             // Showing the date picker to the user.
