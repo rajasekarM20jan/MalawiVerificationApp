@@ -74,6 +74,20 @@
     <string name="engine">Motor #</string>
     <string name="toc">Tipo de Cobertura</string>
     <string name="comprehensive">Completa</string>
+    <string name="certVer">Verificação de Certificado!</string>
+    <string name="getStrt">Começar</string>
+    <string name="cnfmMsg">A verificação IAM enviará um OTP para verificar o seu número de telefone</string>
+    <string name="phHint">Digite o número de telefone</string>
+    <string name="aldn">Quase Pronto</string>
+    <string name="actcodeTxt">Por favor, digite o código de ativação enviado para o seu número de telefone.</string>
+    <string name="dummyNum">+265760489032</string>
+    <string name="wrngNum">Não é o seu número de telefone? </string>
+    <string name="clh">Clique aqui</string>
+    <string name="skip">PULAR</string>
+    <string name="prev"><![CDATA[<Anterior]]></string>
+    <string name="next"><![CDATA[Próximo>]]></string>
+    <string name="cerNo">Número do Certificado</string>
+    <string name="stat">Status</string>
     <string-array name="insuranceSpinnerArray">
         <item>--Select--</item>
         <item>NICO</item>

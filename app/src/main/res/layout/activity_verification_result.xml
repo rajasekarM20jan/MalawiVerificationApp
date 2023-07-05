@@ -69,7 +69,7 @@
                             android:text="@string/certificate"
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -80,7 +80,7 @@
                             android:text="@string/colon"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -93,6 +93,9 @@
                                 android:id="@+id/txtcertificateval"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:layout_weight="1"
                                 android:text="@string/certNum" />
                         </LinearLayout>
@@ -120,7 +123,7 @@
                             android:text="@string/vehicle"
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -131,7 +134,7 @@
                             android:text="@string/colon"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -145,6 +148,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/vehNum" />
                         </LinearLayout>
 
@@ -171,7 +177,7 @@
                             android:text="@string/ins_company"
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -182,7 +188,7 @@
                             android:text="@string/colon"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -196,6 +202,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/kenyaOrient" />
                         </LinearLayout>
 
@@ -222,7 +231,7 @@
                             android:text="@string/chassis"
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -233,7 +242,7 @@
                             android:text="@string/colon"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -247,6 +256,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/chNum" />
                         </LinearLayout>
 
@@ -273,7 +285,7 @@
                             android:text="@string/policy_start"
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -284,7 +296,7 @@
                             android:text="@string/colon"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -298,6 +310,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/date1" />
                         </LinearLayout>
 
@@ -324,7 +339,7 @@
                             android:text="@string/policy_end"
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -335,7 +350,7 @@
                             android:text="@string/colon"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -349,6 +364,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/date2" />
                         </LinearLayout>
 
@@ -375,7 +393,7 @@
                             android:text="@string/brand"
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -386,7 +404,7 @@
                             android:text="@string/colon"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -400,6 +418,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/nissan" />
                         </LinearLayout>
 
@@ -426,7 +447,7 @@
                             android:text="@string/model"
                             android:textAlignment="textStart"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <TextView
@@ -437,7 +458,7 @@
                             android:text="@string/colon"
                             android:textAlignment="center"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold" />
 
                         <LinearLayout
@@ -451,6 +472,9 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
+                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/modelName" />
                         </LinearLayout>
 
@@ -487,7 +511,7 @@
                                 android:text="@string/cancelled_date"
                                 android:textAlignment="textStart"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/activity_margin_14sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -498,7 +522,7 @@
                                 android:text="@string/colon"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/activity_margin_14sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textStyle="bold" />
 
                             <LinearLayout
@@ -512,6 +536,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:textSize="@dimen/activity_margin_16sp"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                     android:text="@string/date3" />
                             </LinearLayout>
 
@@ -538,7 +565,7 @@
                                 android:text="@string/cancel_reason"
                                 android:textAlignment="textStart"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/activity_margin_14sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textStyle="bold" />
 
                             <TextView
@@ -549,7 +576,7 @@
                                 android:text="@string/colon"
                                 android:textAlignment="center"
                                 android:textColor="@color/black"
-                                android:textSize="@dimen/activity_margin_14sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textStyle="bold" />
 
                             <LinearLayout
@@ -563,6 +590,9 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
+                                    android:textSize="@dimen/activity_margin_16sp"
+                                    android:textColor="@color/black"
+                                    android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                     android:text="@string/reasonText" />
                             </LinearLayout>
 

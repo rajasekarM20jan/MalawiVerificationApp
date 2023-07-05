@@ -14,8 +14,8 @@
     <string name="otp_sent">OTP has been sent to your mobile number</string>
     <string name="otp_verification">Enter verification code</string>
     <string name="verification_app_text">Experience Seamless Policy Verification with our App - Instantly Confirm the Validity of Your Purchased Policy!</string>
-    <string name="vc_printCode">Verify Certificate - Print Code</string>
-    <string name="vc_no_printCode">Verify Certificate - Without Print Code</string>
+    <string name="vc_printCode">Verify Certificate by Scanning Qr Code</string>
+    <string name="vc_no_printCode">Verify Certificate - Physical</string>
     <string name="vc_secure">Verify Certificate - Secure</string>
     <string name="verification_history">Verification History</string>
     <string name="or">(OR)</string>
@@ -68,7 +68,7 @@
     <string name="regNum">Registration Number</string>
     <string name="cmn_wrong_msg">An unexpected error occurred.</string>
     <string name="vcCert">Verify with Certificate</string>
-    <string name="verificationCert">Verify With Certificate</string>
+    <string name="verificationCert">Verify Certificate - With Certificate No.</string>
     <string name="status">Certificate Status</string>
     <string name="statVal">Upcoming</string>
     <string name="auth_phrase">Experience Seamless Policy Verification with our App - Instantly Confirm the Validity of Your Purchased Policy!</string>

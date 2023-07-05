@@ -200,7 +200,9 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             } else {
                 rooteddevice = false;
             }
-            Locale locale=new Locale("en","IN");
+            Locale currentLocale = Locale.getDefault();
+            String countryCode = currentLocale.getCountry();
+            Locale locale=new Locale("en",countryCode);
             // Getting basic device information and storing the values.
             String androidOS = Build.VERSION.RELEASE;
             String model = Build.MANUFACTURER + " - " + Build.MODEL;
