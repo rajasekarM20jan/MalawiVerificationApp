@@ -93,7 +93,7 @@
                                 android:id="@+id/txtcertificateval"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:layout_weight="1"
@@ -148,7 +148,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/vehNum" />
@@ -202,7 +202,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/kenyaOrient" />
@@ -256,7 +256,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/chNum" />
@@ -310,7 +310,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/date1" />
@@ -364,7 +364,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/date2" />
@@ -418,7 +418,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/nissan" />
@@ -472,7 +472,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:textSize="@dimen/activity_margin_16sp"
+                                android:textSize="@dimen/activity_margin_16dp"
                                 android:textColor="@color/black"
                                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                 android:text="@string/modelName" />
@@ -536,7 +536,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:textSize="@dimen/activity_margin_16sp"
+                                    android:textSize="@dimen/activity_margin_16dp"
                                     android:textColor="@color/black"
                                     android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                     android:text="@string/date3" />
@@ -590,7 +590,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:textSize="@dimen/activity_margin_16sp"
+                                    android:textSize="@dimen/activity_margin_16dp"
                                     android:textColor="@color/black"
                                     android:fontFamily="@font/latinotypeantartidaroundedmedium"
                                     android:text="@string/reasonText" />
@@ -623,7 +623,7 @@
             android:padding="@dimen/activity_margin_6dp"
             android:text="@string/done"
             android:textColor="@color/white"
-            android:textSize="@dimen/activity_margin_20sp"
+            android:textSize="@dimen/activity_margin_20dp"
             android:textStyle="bold"
             app:backgroundTint="@color/apptheme" />
     </LinearLayout>

@@ -45,9 +45,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:padding="@dimen/activity_margin_5dp"
+                        android:fontFamily="@font/latinotypeantartidaroundedmedium"
                         android:text="@string/certNumber"
-                        android:textColor="@color/blackdark"
-                        android:textSize="@dimen/activity_margin_17sp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/activity_margin_18dp"
                         android:textStyle="bold" />
 
                     <EditText
@@ -56,7 +57,9 @@
                         android:layout_height="@dimen/activity_margin_50dp"
                         android:layout_marginStart="@dimen/activity_margin_5dp"
                         android:layout_marginTop="@dimen/activity_margin_10dp"
+                        android:fontFamily="@font/latinotypeantartidaroundedmedium"
                         android:layout_marginEnd="@dimen/activity_margin_5dp"
+                        android:textSize="@dimen/activity_margin_18dp"
                         android:background="@drawable/edit_text"
                         android:hint="@string/certNumber"
                         android:padding="@dimen/activity_margin_10dp" />
@@ -88,7 +91,7 @@
             android:padding="@dimen/activity_margin_10dp"
             android:text="@string/back"
             android:textColor="@color/white"
-            android:textSize="@dimen/activity_margin_20sp"
+            android:textSize="@dimen/activity_margin_20dp"
             android:layout_weight="1"
             android:textStyle="bold" />
 
@@ -103,7 +106,7 @@
             android:padding="@dimen/activity_margin_10dp"
             android:text="@string/verify"
             android:textColor="@color/white"
-            android:textSize="@dimen/activity_margin_20sp"
+            android:textSize="@dimen/activity_margin_20dp"
             android:textStyle="bold"/>
     </LinearLayout>
 

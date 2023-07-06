@@ -72,7 +72,7 @@
                 android:text="@string/align_barcode"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="@dimen/activity_margin_18sp"
+                android:textSize="@dimen/activity_margin_18dp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -89,7 +89,7 @@
                 android:background="@drawable/img_qrcode"
                 android:padding="@dimen/activity_margin_0dp"
                 android:textColor="#FFFFFF"
-                android:textSize="@dimen/activity_margin_20sp"
+                android:textSize="@dimen/activity_margin_20dp"
                 android:textStyle="bold"
                 app:backgroundTint="@color/sienna" />
         </LinearLayout>
@@ -112,7 +112,7 @@
                 android:gravity="bottom|center_horizontal"
                 android:text="@string/scanning_terms"
                 android:textColor="@color/white"
-                android:textSize="@dimen/activity_margin_18sp"
+                android:textSize="@dimen/activity_margin_18dp"
                 android:textStyle="bold" />
 
 

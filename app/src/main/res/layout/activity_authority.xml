@@ -19,7 +19,7 @@
         android:layout_gravity="center_horizontal"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="@dimen/activity_margin_24sp" />
+        android:textSize="@dimen/activity_margin_24dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
         android:text="@string/choose_login"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="@dimen/activity_margin_17sp" />
+        android:textSize="@dimen/activity_margin_17dp" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -85,7 +85,7 @@
                 android:padding="@dimen/activity_margin_6dp"
                 android:text="@string/login_police"
                 android:textColor="@color/white"
-                android:textSize="@dimen/activity_margin_20sp"
+                android:textSize="@dimen/activity_margin_20dp"
                 android:textStyle="bold"
                 app:backgroundTint="@color/apptheme" />
         </LinearLayout>
@@ -94,7 +94,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/or"
-            android:textSize="@dimen/activity_margin_25sp"
+            android:textSize="@dimen/activity_margin_25dp"
             android:layout_gravity="center_horizontal"
             android:textColor="@color/black"
             android:layout_marginBottom="@dimen/activity_margin_8dp"/>
@@ -114,7 +114,7 @@
                 android:padding="@dimen/activity_margin_6dp"
                 android:text="@string/login_guest"
                 android:textColor="@color/white"
-                android:textSize="@dimen/activity_margin_20sp"
+                android:textSize="@dimen/activity_margin_20dp"
                 android:textStyle="bold"
                 app:backgroundTint="@color/apptheme" />
         </LinearLayout>

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="@string/aldn"
         android:textAlignment="center"
-        android:textSize="@dimen/activity_margin_20sp"
+        android:textSize="@dimen/activity_margin_20dp"
         android:fontFamily="@font/latinotypeantartidaroundedmedium"
         android:textColor="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
@@ -54,7 +54,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
-                android:textSize="@dimen/activity_margin_20sp"
+                android:textSize="@dimen/activity_margin_20dp"
                 android:text="@string/otp_verification" />
 
             <TextView
@@ -65,7 +65,7 @@
                 android:padding="@dimen/activity_margin_5dp"
                 android:textColor="@color/black"
                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
-                android:textSize="@dimen/activity_margin_16sp"
+                android:textSize="@dimen/activity_margin_16dp"
                 android:text="@string/actcodeTxt" />
 
             <TextView
@@ -74,11 +74,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:letterSpacing="0.1"
+                android:letterdpacing="0.1"
                 android:padding="@dimen/activity_margin_5dp"
                 android:textColor="@color/apptheme"
                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
-                android:textSize="@dimen/activity_margin_24sp"
+                android:textSize="@dimen/activity_margin_24dp"
                 android:text="@string/dummyNum" />
 
             <LinearLayout
@@ -95,7 +95,7 @@
                     android:padding="@dimen/activity_margin_5dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/latinotypeantartidaroundedmedium"
-                    android:textSize="@dimen/activity_margin_16sp"
+                    android:textSize="@dimen/activity_margin_16dp"
                     android:text="@string/wrngNum" />
                 <TextView
                     android:id="@+id/numberRetype"
@@ -105,7 +105,7 @@
                     android:padding="@dimen/activity_margin_5dp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/latinotypeantartidaroundedmedium"
-                    android:textSize="@dimen/activity_margin_16sp"
+                    android:textSize="@dimen/activity_margin_16dp"
                     android:text="@string/clh" />
 
 
@@ -135,6 +135,7 @@
                 android:inputType="number"
                 android:textAlignment="center"
                 android:layout_margin="@dimen/activity_margin_5dp"
+                android:textSize="@dimen/activity_margin_18dp"
                 android:maxLines="1"
                 android:maxLength="1"
                 android:layout_weight="1"
@@ -148,6 +149,7 @@
                 android:inputType="number"
                 android:textAlignment="center"
                 android:layout_margin="@dimen/activity_margin_5dp"
+                android:textSize="@dimen/activity_margin_18dp"
                 android:maxLines="1"
                 android:maxLength="1"
                 android:layout_weight="1"
@@ -159,6 +161,7 @@
                 android:layout_height="@dimen/activity_margin_40dp"
                 android:background="@drawable/rectborder"
                 android:inputType="number"
+                android:textSize="@dimen/activity_margin_18dp"
                 android:textAlignment="center"
                 android:layout_margin="@dimen/activity_margin_5dp"
                 android:maxLines="1"
@@ -173,6 +176,7 @@
                 android:background="@drawable/rectborder"
                 android:inputType="number"
                 android:layout_margin="@dimen/activity_margin_5dp"
+                android:textSize="@dimen/activity_margin_18dp"
                 android:maxLines="1"
                 android:textAlignment="center"
                 android:maxLength="1"
@@ -183,6 +187,7 @@
                 android:id="@+id/otp_edit_text_5"
                 android:layout_width="@dimen/activity_margin_40dp"
                 android:layout_height="@dimen/activity_margin_40dp"
+                android:textSize="@dimen/activity_margin_18dp"
                 android:background="@drawable/rectborder"
                 android:inputType="number"
                 android:layout_margin="@dimen/activity_margin_5dp"
@@ -196,6 +201,7 @@
                 android:id="@+id/otp_edit_text_6"
                 android:layout_width="@dimen/activity_margin_40dp"
                 android:layout_height="@dimen/activity_margin_40dp"
+                android:textSize="@dimen/activity_margin_18dp"
                 android:background="@drawable/rectborder"
                 android:inputType="number"
                 android:textAlignment="center"
@@ -224,7 +230,7 @@
                 android:padding="@dimen/activity_margin_6dp"
                 android:text="@string/verify_otp"
                 android:textColor="@color/white"
-                android:textSize="@dimen/activity_margin_20sp"
+                android:textSize="@dimen/activity_margin_20dp"
                 android:textStyle="bold"
                 app:backgroundTint="@color/apptheme" />
         </LinearLayout>
@@ -250,7 +256,7 @@
                 android:fontFamily="serif"
                 android:text="@string/otp_wait"
                 android:textColor="@color/black"
-                android:textSize="@dimen/activity_margin_14sp" />
+                android:textSize="@dimen/activity_margin_14dp" />
 
             <TextView
                 android:id="@+id/txtotptimer"
@@ -260,7 +266,7 @@
                 android:fontFamily="serif"
                 android:text="@string/_00_59"
                 android:textColor="@color/apptheme"
-                android:textSize="@dimen/activity_margin_14sp" />
+                android:textSize="@dimen/activity_margin_14dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -284,7 +290,7 @@
                 android:fontFamily="serif"
                 android:text="@string/otp_not_received"
                 android:textColor="@color/black"
-                android:textSize="@dimen/activity_margin_14sp" />
+                android:textSize="@dimen/activity_margin_14dp" />
 
             <TextView
                 android:id="@+id/txtresendotp"
@@ -294,7 +300,7 @@
                 android:fontFamily="serif"
                 android:text="@string/resend_otp"
                 android:textColor="@color/apptheme"
-                android:textSize="@dimen/activity_margin_14sp" />
+                android:textSize="@dimen/activity_margin_14dp" />
         </LinearLayout>
     </LinearLayout>
 

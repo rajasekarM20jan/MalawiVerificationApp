@@ -22,7 +22,7 @@
         android:fontFamily="@font/latinotypeantartidaroundedmedium"
         android:textColor="@color/white"
         android:textStyle="bold"
-        android:textSize="@dimen/activity_margin_14sp"
+        android:textSize="@dimen/activity_margin_14dp"
         android:layout_marginTop="@dimen/activity_margin_10dp"
         android:layout_marginBottom="@dimen/activity_margin_20dp"
         android:layout_marginEnd="@dimen/activity_margin_20dp"

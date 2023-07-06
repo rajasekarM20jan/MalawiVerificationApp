@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:text="@string/getStrt"
         android:textAlignment="center"
-        android:textSize="@dimen/activity_margin_20sp"
+        android:textSize="@dimen/activity_margin_20dp"
         android:fontFamily="@font/latinotypeantartidaroundedmedium"
         android:textColor="@android:color/white"
         app:layout_constraintTop_toTopOf="parent"
@@ -66,7 +66,7 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:fontFamily="@font/latinotypeantartidaroundedbold"
-                android:textSize="@dimen/activity_margin_20sp" />
+                android:textSize="@dimen/activity_margin_20dp" />
 
 
             <TextView
@@ -78,7 +78,7 @@
                 android:text="@string/cnfmMsg"
                 android:textColor="@color/black"
                 android:fontFamily="@font/latinotypeantartidaroundedmedium"
-                android:textSize="@dimen/activity_margin_16sp" />
+                android:textSize="@dimen/activity_margin_16dp" />
 
 
             <LinearLayout
@@ -145,7 +145,7 @@
                     android:padding="@dimen/activity_margin_6dp"
                     android:text="@string/send_otp"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/activity_margin_20sp"
+                    android:textSize="@dimen/activity_margin_20dp"
                     android:textStyle="bold"
                     app:backgroundTint="@color/apptheme" />
             </LinearLayout>

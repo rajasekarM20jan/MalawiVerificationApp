@@ -50,7 +50,7 @@
                         android:textAlignment="textStart"
                         android:textStyle="bold"
                         android:textColor="@color/black"
-                        android:textSize="@dimen/activity_margin_18sp" />
+                        android:textSize="@dimen/activity_margin_18dp" />
 
                     <Spinner
                         android:layout_height="@dimen/activity_margin_50dp"
@@ -58,7 +58,7 @@
                         android:layout_marginTop="@dimen/activity_margin_10dp"
                         android:layout_marginBottom="@dimen/activity_margin_10dp"
                         android:background="@drawable/spinner"
-                        android:id="@+id/insuranceSpinner"
+                        android:id="@+id/insurancedpinner"
                         />
 
                 </LinearLayout>
@@ -75,7 +75,7 @@
                         android:padding="@dimen/activity_margin_5dp"
                         android:text="@string/reg_ch_num"
                         android:textColor="@color/blackdark"
-                        android:textSize="@dimen/activity_margin_17sp"
+                        android:textSize="@dimen/activity_margin_17dp"
                         android:textStyle="bold" />
 
                     <RadioGroup
@@ -92,7 +92,7 @@
                             android:checked="true"
                             android:buttonTint="@color/apptheme"
                             android:text="@string/regNum"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_14dp"
                             android:fontFamily="sans-serif"
                             android:textStyle="bold"
                             android:textColor="@color/black"/>
@@ -102,7 +102,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/chassisNum"
-                            android:textSize="@dimen/activity_margin_14sp"
+                            android:textSize="@dimen/activity_margin_14dp"
                             android:fontFamily="sans-serif"
                             android:textStyle="bold"
                             android:buttonTint="@color/apptheme"
@@ -147,7 +147,7 @@
             android:padding="@dimen/activity_margin_10dp"
             android:text="@string/back"
             android:textColor="@color/white"
-            android:textSize="@dimen/activity_margin_20sp"
+            android:textSize="@dimen/activity_margin_20dp"
             android:textStyle="bold" />
 
         <android.widget.Button
@@ -161,7 +161,7 @@
             android:padding="@dimen/activity_margin_10dp"
             android:text="@string/verify"
             android:textColor="@color/white"
-            android:textSize="@dimen/activity_margin_20sp"
+            android:textSize="@dimen/activity_margin_20dp"
             android:textStyle="bold"
             app:backgroundTint="@color/apptheme" />
     </LinearLayout>

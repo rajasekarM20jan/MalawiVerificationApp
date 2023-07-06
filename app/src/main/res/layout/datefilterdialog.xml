@@ -13,7 +13,7 @@
         android:textStyle="bold"
         android:fontFamily="@font/latinotypeantartidaroundedmedium"
         android:textColor="@color/black"
-        android:textSize="@dimen/activity_margin_20sp"
+        android:textSize="@dimen/activity_margin_20dp"
         android:text="From:"
         />
     <TextView
@@ -21,7 +21,9 @@
         android:layout_width="match_parent"
         android:layout_height="@dimen/activity_margin_50dp"
         android:layout_margin="@dimen/activity_margin_20dp"
+        android:fontFamily="@font/latinotypeantartidaroundedmedium"
         android:text="Enter a Date"
+        android:textSize="@dimen/activity_margin_16dp"
         android:gravity="center_vertical"
         android:padding="@dimen/activity_margin_10dp"
         android:background="@drawable/rectborder"
@@ -35,7 +37,7 @@
         android:textStyle="bold"
         android:fontFamily="@font/latinotypeantartidaroundedmedium"
         android:textColor="@color/black"
-        android:textSize="@dimen/activity_margin_20sp"
+        android:textSize="@dimen/activity_margin_20dp"
         android:text="Till:"
         />
     <TextView
@@ -44,6 +46,8 @@
         android:layout_height="@dimen/activity_margin_50dp"
         android:layout_margin="@dimen/activity_margin_20dp"
         android:text="Enter a Date"
+        android:fontFamily="@font/latinotypeantartidaroundedmedium"
+        android:textSize="@dimen/activity_margin_16dp"
         android:gravity="center_vertical"
         android:padding="@dimen/activity_margin_10dp"
         android:background="@drawable/rectborder"
@@ -54,6 +58,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:fontFamily="@font/latinotypeantartidaroundedmedium"
+        android:textSize="@dimen/activity_margin_16dp"
         android:layout_gravity="center"
         android:layout_marginBottom="@dimen/activity_margin_15dp"
         android:text="search"/>
