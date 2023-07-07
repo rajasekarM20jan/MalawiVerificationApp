@@ -58,7 +58,7 @@
                         android:layout_marginTop="@dimen/activity_margin_10dp"
                         android:layout_marginBottom="@dimen/activity_margin_10dp"
                         android:background="@drawable/spinner"
-                        android:id="@+id/insurancedpinner"
+                        android:id="@+id/insuranceSpinner"
                         />
 
                 </LinearLayout>

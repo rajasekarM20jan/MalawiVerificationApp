@@ -33,7 +33,7 @@
             android:textSize="@dimen/activity_margin_16dp"
             android:textStyle="bold"
             android:fontFamily="@font/latinotypeantartidaroundedmedium"
-            android:letterdpacing="0.1"/>
+            android:letterSpacing="0.1"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -79,7 +79,7 @@
                 android:layout_height="@dimen/activity_margin_50dp"
                 android:layout_margin="@dimen/activity_margin_10dp"
                 android:text="@string/prev"
-                android:letterdpacing="0.05"
+                android:letterSpacing="0.05"
                 android:textColor="@color/grey"
                 android:gravity="center"
                 android:textSize="@dimen/activity_margin_16dp"
@@ -103,7 +103,7 @@
                 android:layout_height="@dimen/activity_margin_50dp"
                 android:layout_margin="@dimen/activity_margin_10dp"
                 android:text="@string/next"
-                android:letterdpacing="0.05"
+                android:letterSpacing="0.05"
                 android:textColor="@color/apptheme"
                 android:gravity="center"
                 android:textSize="@dimen/activity_margin_16dp"
