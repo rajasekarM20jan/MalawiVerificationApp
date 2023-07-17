@@ -48,6 +48,7 @@
                         android:layout_weight="1"
                         android:text="@string/insurance_company"
                         android:textAlignment="textStart"
+                        android:fontFamily="@font/latinotypeantartidaroundedmedium"
                         android:textStyle="bold"
                         android:textColor="@color/black"
                         android:textSize="@dimen/activity_margin_18dp" />
@@ -58,6 +59,7 @@
                         android:layout_marginTop="@dimen/activity_margin_10dp"
                         android:layout_marginBottom="@dimen/activity_margin_10dp"
                         android:background="@drawable/spinner"
+                        android:fontFamily="@font/latinotypeantartidaroundedmedium"
                         android:id="@+id/insuranceSpinner"
                         />
 
@@ -74,6 +76,7 @@
                         android:layout_height="wrap_content"
                         android:padding="@dimen/activity_margin_5dp"
                         android:text="@string/reg_ch_num"
+                        android:fontFamily="@font/latinotypeantartidaroundedmedium"
                         android:textColor="@color/blackdark"
                         android:textSize="@dimen/activity_margin_17dp"
                         android:textStyle="bold" />
@@ -90,10 +93,10 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:checked="true"
+                            android:fontFamily="@font/latinotypeantartidaroundedmedium"
                             android:buttonTint="@color/apptheme"
                             android:text="@string/regNum"
                             android:textSize="@dimen/activity_margin_14dp"
-                            android:fontFamily="sans-serif"
                             android:textStyle="bold"
                             android:textColor="@color/black"/>
                         <RadioButton
@@ -103,7 +106,7 @@
                             android:layout_weight="1"
                             android:text="@string/chassisNum"
                             android:textSize="@dimen/activity_margin_14dp"
-                            android:fontFamily="sans-serif"
+                            android:fontFamily="@font/latinotypeantartidaroundedmedium"
                             android:textStyle="bold"
                             android:buttonTint="@color/apptheme"
                             android:textColor="@color/black"/>
@@ -117,6 +120,7 @@
                         android:layout_marginStart="@dimen/activity_margin_5dp"
                         android:layout_marginTop="@dimen/activity_margin_10dp"
                         android:layout_marginEnd="@dimen/activity_margin_5dp"
+                        android:fontFamily="@font/latinotypeantartidaroundedmedium"
                         android:background="@drawable/edit_text"
                         android:hint="@string/regNum"
                         android:padding="@dimen/activity_margin_10dp" />
@@ -146,6 +150,7 @@
             android:background="@drawable/roundedbuttongrey"
             android:padding="@dimen/activity_margin_10dp"
             android:text="@string/back"
+            android:fontFamily="@font/latinotypeantartidaroundedmedium"
             android:textColor="@color/white"
             android:textSize="@dimen/activity_margin_20dp"
             android:textStyle="bold" />
@@ -160,6 +165,7 @@
             android:background="@drawable/roundedbutton"
             android:padding="@dimen/activity_margin_10dp"
             android:text="@string/verify"
+            android:fontFamily="@font/latinotypeantartidaroundedmedium"
             android:textColor="@color/white"
             android:textSize="@dimen/activity_margin_20dp"
             android:textStyle="bold"

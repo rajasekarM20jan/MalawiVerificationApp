@@ -144,6 +144,7 @@
                     android:background="@drawable/roundedbutton"
                     android:padding="@dimen/activity_margin_6dp"
                     android:text="@string/send_otp"
+                    android:fontFamily="@font/latinotypeantartidaroundedmedium"
                     android:textColor="@color/white"
                     android:textSize="@dimen/activity_margin_20dp"
                     android:textStyle="bold"

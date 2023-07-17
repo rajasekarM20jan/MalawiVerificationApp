@@ -15,6 +15,7 @@ import static com.malawi.dmvicverification.MainActivity.policyEndDate;
 import static com.malawi.dmvicverification.MainActivity.policyStartDate;
 import static com.malawi.dmvicverification.MainActivity.status;
 import static com.malawi.dmvicverification.MainActivity.vehicleNum;
+import static com.malawi.dmvicverification.MainActivity.yearOfManufacture;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -54,7 +55,7 @@ public class VerificationResult extends AppCompatActivity {
     ImageView statusImage;
     TextView txtcertificateval,txtVehicleval,txtInsucmpnyval,txtChassisval
             ,txtpolicystdtval,txtpolicyenddtval,txtVchmakeval
-            ,txtvchmodelval,txtcanceldtval,txtcancelresval;
+            ,txtvchmodelval,txtcanceldtval,txtcancelresval,txtYomModelVal;
     Button doneButton;
     LinearLayout linearcancelid,dmviccertificate;
 
@@ -90,6 +91,7 @@ public class VerificationResult extends AppCompatActivity {
             txtcancelresval=findViewById(R.id.txtcancelresval);
             doneButton=findViewById(R.id.doneButton);
             linearcancelid=findViewById(R.id.linearcancelid);
+            txtYomModelVal=findViewById(R.id.txtYomModelVal);
             basicFunctions();
         }catch (Exception e){
             e.printStackTrace();
@@ -110,6 +112,7 @@ public class VerificationResult extends AppCompatActivity {
                 txtpolicyenddtval.setText(policyEndDate);
                 txtVchmakeval.setText(make);
                 txtvchmodelval.setText(model);
+                txtYomModelVal.setText(yearOfManufacture);
             }else{
                 dmviccertificate.setVisibility(View.GONE);
                 linearcancelid.setVisibility(View.GONE);

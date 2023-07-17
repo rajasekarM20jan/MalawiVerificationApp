@@ -88,6 +88,8 @@
     <string name="next"><![CDATA[Próximo>]]></string>
     <string name="cerNo">Número do Certificado</string>
     <string name="stat">Status</string>
+    <string name="agreeBtn">Concordo com os Termos e Condições</string>
+    <string name="yom">Ano de Fabricação</string>
     <string-array name="insuranceSpinnerArray">
         <item>--Select--</item>
         <item>NICO</item>

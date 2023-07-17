@@ -16,6 +16,7 @@ import static com.malawi.dmvicverification.MainActivity.policyStartDate;
 import static com.malawi.dmvicverification.MainActivity.status;
 import static com.malawi.dmvicverification.MainActivity.unAuthorize;
 import static com.malawi.dmvicverification.MainActivity.vehicleNum;
+import static com.malawi.dmvicverification.MainActivity.yearOfManufacture;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -56,6 +57,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 
@@ -297,8 +300,14 @@ public class QrCodeScanner extends AppCompatActivity {
                                             vehicleNum=insuranceDetails.getString("registrationNumber");
                                             insuranceCompany=insuranceDetails.getString("insuranceCompany");
                                             chassisNum=insuranceDetails.getString("chassisNumber");
-                                            policyStartDate=insuranceDetails.getString("commencingDate");
-                                            policyEndDate=insuranceDetails.getString("expiryDate");
+                                            SimpleDateFormat sf=new SimpleDateFormat("dd-MMM-yyyy");
+                                            String startDate=insuranceDetails.getString("commencingDate");
+                                            Date d=new Date(startDate);
+                                            policyStartDate=sf.format(d);
+                                            String endDate=insuranceDetails.getString("expiryDate");
+                                            Date e=new Date(endDate);
+                                            policyEndDate=sf.format(e);
+                                            yearOfManufacture=insuranceDetails.getString("yearOfManufacture");
                                             make=insuranceDetails.getString("make");
                                             model=insuranceDetails.getString("model");
                                             status=insuranceDetails.getString("status");

@@ -91,6 +91,8 @@
     <string name="next"><![CDATA[Next>]]></string>
     <string name="cerNo">Certificate #</string>
     <string name="stat">Status</string>
+    <string name="agreeBtn">I Agree to Terms and Conditions</string>
+    <string name="yom">Year Of Manufacture</string>
     <string-array name="insuranceSpinnerArray">
         <item>--Select--</item>
         <item>NICO</item>

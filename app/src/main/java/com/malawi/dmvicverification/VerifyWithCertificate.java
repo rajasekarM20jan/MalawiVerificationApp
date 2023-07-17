@@ -23,6 +23,8 @@ import com.google.gson.JsonObject;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -48,6 +50,7 @@ import static com.malawi.dmvicverification.MainActivity.policyStartDate;
 import static com.malawi.dmvicverification.MainActivity.status;
 import static com.malawi.dmvicverification.MainActivity.unAuthorize;
 import static com.malawi.dmvicverification.MainActivity.vehicleNum;
+import static com.malawi.dmvicverification.MainActivity.yearOfManufacture;
 import static com.malawi.dmvicverification.QrCodeScanner.intentData;
 
 public class VerifyWithCertificate extends AppCompatActivity {
@@ -182,8 +185,14 @@ public class VerifyWithCertificate extends AppCompatActivity {
                                             vehicleNum=insuranceDetails.getString("registrationNumber");
                                             insuranceCompany=insuranceDetails.getString("insuranceCompany");
                                             chassisNum=insuranceDetails.getString("chassisNumber");
-                                            policyStartDate=insuranceDetails.getString("commencingDate");
-                                            policyEndDate=insuranceDetails.getString("expiryDate");
+                                            SimpleDateFormat sf=new SimpleDateFormat("dd-MMM-yyyy");
+                                            String startDate=insuranceDetails.getString("commencingDate");
+                                            Date d=new Date(startDate);
+                                            policyStartDate=sf.format(d);
+                                            String endDate=insuranceDetails.getString("expiryDate");
+                                            Date e=new Date(endDate);
+                                            policyEndDate=sf.format(e);
+                                            yearOfManufacture=insuranceDetails.getString("yearOfManufacture");
                                             make=insuranceDetails.getString("make");
                                             model=insuranceDetails.getString("model");
                                             status=insuranceDetails.getString("status");

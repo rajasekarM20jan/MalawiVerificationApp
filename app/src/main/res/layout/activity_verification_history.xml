@@ -36,9 +36,9 @@
             android:text="@string/no_records_to_display"
             android:textStyle="bold"
             android:visibility="gone"
+            android:fontFamily="@font/latinotypeantartidaroundedmedium"
             android:layout_gravity="center"
             android:gravity="center"
-            android:fontFamily="serif"
             android:id="@+id/noRecordsTextView"/>
 
         <ListView

@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
     };
     public static String certificateNum, vehicleNum, insuranceCompany, chassisNum,
-            policyStartDate, policyEndDate, make, model, cancelledDate, cancelledReason,status;
+            policyStartDate, policyEndDate, make, model, cancelledDate, cancelledReason,status,yearOfManufacture;
     public static String vehicleRegNum, chaNum,engineNum,coverType,validFrom,crRef,crComments;
 
     @SuppressLint("HardwareIds")

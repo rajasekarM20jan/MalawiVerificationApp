@@ -89,6 +89,8 @@
     <string name="next"><![CDATA[Suivant>]]></string>
     <string name="cerNo">Numéro de certificat</string>
     <string name="stat">Statut</string>
+    <string name="agreeBtn">J\'accepte les termes et conditions</string>
+    <string name="yom">Année de fabrication</string>
     <string-array name="insuranceSpinnerArray">
         <item>--Select--</item>
         <item>NICO</item>

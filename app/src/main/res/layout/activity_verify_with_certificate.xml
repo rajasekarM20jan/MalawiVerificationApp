@@ -89,6 +89,7 @@
             android:layout_marginTop="@dimen/activity_margin_10dp"
             android:background="@drawable/roundedbuttongrey"
             android:padding="@dimen/activity_margin_10dp"
+            android:fontFamily="@font/latinotypeantartidaroundedmedium"
             android:text="@string/back"
             android:textColor="@color/white"
             android:textSize="@dimen/activity_margin_20dp"
@@ -105,6 +106,7 @@
             android:background="@drawable/roundedbutton"
             android:padding="@dimen/activity_margin_10dp"
             android:text="@string/verify"
+            android:fontFamily="@font/latinotypeantartidaroundedmedium"
             android:textColor="@color/white"
             android:textSize="@dimen/activity_margin_20dp"
             android:textStyle="bold"/>
