@@ -1,0 +1,100 @@
+
+D
+java:S3740C"/Provide the parametrized type for this generic.(·üÍ5
+F
+java:S3740Ò"/Provide the parametrized type for this generic.(¦±„¸
+a
+java:S1192g"FDefine a constant instead of duplicating this literal "RegNo" 3 times.(™ÑÈñûÿÿÿÿ
+^
+java:S1192ğ"GDefine a constant instead of duplicating this literal "rcode" 10 times.(ÅÀ»ü
+P
+java:S1141n"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+P
+java:S1141w"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141Š"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141”"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141™"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141¼"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141İ"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141ò"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141‹"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+g	java:S117È"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÿ«®
+g	java:S117É"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¶èÈ
+g	java:S117 "QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÿ«®
+g	java:S117¡"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¶èÈ
+C
+java:S1604h"(Make this anonymous inner class a lambda(áİ—Ûÿÿÿÿÿ
+D
+java:S1604»"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604‘"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604º"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604Ç"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604Ü"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604Õ"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604‡"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604ê"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604“"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604 "(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604®"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604§"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+f
+java:S1301l"KReplace this "switch" statement by "if" statements to increase readability.(û·Ç¢øÿÿÿÿ
+n	java:S1169"YRename this field "RegisterNumber" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¾³…¶
+n	java:S116;"TRename this field "Btnverify" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œİƒ½ıÿÿÿÿ
+l	java:S116;"RRename this field "Btnscan" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œİƒ½ıÿÿÿÿ
+@
+java:S1659;"%Declare "Btnscan" on a separate line.(œİƒ½ıÿÿÿÿ
+A
+java:S1659B"&Declare "chaRadio" on a separate line.(ù×ÎËùÿÿÿÿ
+Q
+java:S1874>"6Remove this use of "ProgressDialog"; it is deprecated.(ÜçÆúÿÿÿÿ
+h
+java:S3776e"RRefactor this method to reduce its Cognitive Complexity from 23 to the 15 allowed.(›ù™×
+<	java:S131l""Add a default case to this switch.(û·Ç¢øÿÿÿÿ
+T	java:S106ˆ"9Replace this use of System.out or System.err by a logger.(½—„óûÿÿÿÿ
+i
+java:S3776§"SRefactor this method to reduce its Cognitive Complexity from 160 to the 15 allowed.(ãØ„H
+O	java:S106·"9Replace this use of System.out or System.err by a logger.(ëŸÁ
+R
+java:S1874¿"6Remove this use of "ProgressDialog"; it is deprecated.(×Ô÷Æşÿÿÿÿ
+I
+java:S1874À"2Remove this use of "setMessage"; it is deprecated.(šÕ²Ì
+L
+java:S1481Ê"5Remove this unused "insuranceCompany" local variable.(‚Èƒæ
+O	java:S106Ï"9Replace this use of System.out or System.err by a logger.(Àù—©
+O	java:S106Ñ"9Replace this use of System.out or System.err by a logger.(™Èí§
+T	java:S106ÿ"9Replace this use of System.out or System.err by a logger.(É¶´şúÿÿÿÿ
+C
+java:S1659˜"'Declare "errorText" on a separate line.(‘üüÿÿÿÿ
+H
+java:S1602©",Remove useless curly braces around statement(ÍĞ÷¶şÿÿÿÿ
+j
+java:S3776ÿ"SRefactor this method to reduce its Cognitive Complexity from 155 to the 15 allowed.(ÌÙ”ì
+R
+java:S1874‹"6Remove this use of "ProgressDialog"; it is deprecated.(×Ô÷Æşÿÿÿÿ
+I
+java:S1874Œ"2Remove this use of "setMessage"; it is deprecated.(šÕ²Ì
+C
+java:S1659ñ"'Declare "errorText" on a separate line.(‘üüÿÿÿÿ
+H
+java:S1602ş",Remove useless curly braces around statement(ÍĞ÷¶şÿÿÿÿ
+f
+java:S1874Û"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ

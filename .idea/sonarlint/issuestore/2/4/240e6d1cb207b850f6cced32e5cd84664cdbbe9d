@@ -1,0 +1,111 @@
+
+]
+java:S1192¡"FDefine a constant instead of duplicating this literal "rcode" 6 times.(ÅÀ»ü
+K
+java:S1066Ù"/Merge this if statement with the enclosing one.(ÿ´Âúÿÿÿÿ
+F
+java:S1066ì"/Merge this if statement with the enclosing one.(‚ÿİü
+F
+java:S1066ÿ"/Merge this if statement with the enclosing one.(†˜‰Ô
+E
+java:S1066’"/Merge this if statement with the enclosing one.(ÌĞ³g
+F
+java:S1066¥"/Merge this if statement with the enclosing one.(Å´³õ
+Q
+java:S1141¿"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141å"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+g	java:S117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÿ«®
+g	java:S117†"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¶èÈ
+g	java:S117·"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÿ«®
+g	java:S117¸"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¶èÈ
+?
+java:S1604Ô"(Make this anonymous inner class a lambda(º£ïô
+?
+java:S1604ç"(Make this anonymous inner class a lambda(ˆòŠ‹
+?
+java:S1604ú"(Make this anonymous inner class a lambda(İòÊ‚
+?
+java:S1604"(Make this anonymous inner class a lambda(”¬šù
+?
+java:S1604 "(Make this anonymous inner class a lambda(Õ¯­•
+D
+java:S1604ø"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604Ë"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604·"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604İ"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604ê"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604€"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604ù"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604ª"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604ğ"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604İ"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604‚"(Make this anonymous inner class a lambda(˜¡œn
+>
+java:S1604—"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604ª"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604£"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+j	java:S1166"URename this field "OTPSeconds" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áÜ
+d
+java:S16591"IDeclare "txtresendotp" and all following declarations on a separate line.(Ô…Õ‡ÿÿÿÿÿ
+_
+java:S16594"IDeclare "otpEditText2" and all following declarations on a separate line.(“Ìêî
+@
+java:S16596"*Declare "resendLayout" on a separate line.(áÜ
+Q
+java:S18745"6Remove this use of "ProgressDialog"; it is deprecated.(ÜçÆúÿÿÿÿ
+h
+java:S3776\"RRefactor this method to reduce its Cognitive Complexity from 69 to the 15 allowed.(›ù™×
+N	java:S106b"9Replace this use of System.out or System.err by a logger.(º·™Ù
+—
+java:S1186k"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+—
+java:S1186{"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186‘"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186—"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186¦"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186¬"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186»"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+˜
+java:S1186Á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(«û³±
+˜
+java:S1186Ğ"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(±¾ê
+o
+java:S3776ñ"SRefactor this method to reduce its Cognitive Complexity from 110 to the 15 allowed.(¿üĞöıÿÿÿÿ
+R
+java:S1874ü"6Remove this use of "ProgressDialog"; it is deprecated.(×Ô÷Æşÿÿÿÿ
+I
+java:S1874ı"2Remove this use of "setMessage"; it is deprecated.(šÕ²Ì
+C
+java:S1659¾"'Declare "errorText" on a separate line.(‘üüÿÿÿÿ
+i
+java:S3776¢"RRefactor this method to reduce its Cognitive Complexity from 95 to the 15 allowed.(—äúı
+R
+java:S1874®"6Remove this use of "ProgressDialog"; it is deprecated.(×Ô÷Æşÿÿÿÿ
+I
+java:S1874¯"2Remove this use of "setMessage"; it is deprecated.(šÕ²Ì
+C
+java:S1659ä"'Declare "errorText" on a separate line.(‘üüÿÿÿÿ
+f
+java:S1874Í"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ

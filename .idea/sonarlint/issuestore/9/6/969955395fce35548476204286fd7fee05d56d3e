@@ -1,0 +1,43 @@
+
+]
+java:S1192¤"FDefine a constant instead of duplicating this literal "rcode" 4 times.(ÅÀ»ü
+Q
+java:S1141Å"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+g	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÿ«®
+g	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¶èÈ
+C
+java:S1604W"(Make this anonymous inner class a lambda(Ôæ¢ªûÿÿÿÿ
+C
+java:S1604}"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604Ñ"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604½"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604ã"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604ğ"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604†"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604ş"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+m	java:S1162"XRename this field "BtnLoginGuest" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§¼ÆÌ
+n	java:S1162"YRename this field "BtnLoginPolice" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§¼ÆÌ
+B
+java:S16592",Declare "BtnLoginPolice" on a separate line.(§¼ÆÌ
+Q
+java:S18745"6Remove this use of "ProgressDialog"; it is deprecated.(ÜçÆúÿÿÿÿ
+1
+java:S3626i"Remove this redundant jump.(ûÁİ…
+i
+java:S3776u"SRefactor this method to reduce its Cognitive Complexity from 123 to the 15 allowed.(ıïš
+R
+java:S1874"6Remove this use of "ProgressDialog"; it is deprecated.(×Ô÷Æşÿÿÿÿ
+I
+java:S1874‚"2Remove this use of "setMessage"; it is deprecated.(šÕ²Ì
+C
+java:S1659Ä"'Declare "errorText" on a separate line.(‘üüÿÿÿÿ
+f
+java:S1874¬"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ

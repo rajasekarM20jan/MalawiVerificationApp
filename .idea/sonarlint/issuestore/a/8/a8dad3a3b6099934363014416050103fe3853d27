@@ -1,0 +1,15 @@
+
+v
+java:S1488D"[Immediately return this expression instead of assigning it to the temporary variable "res".(ŒôÆúÿÿÿÿ
+q
+java:S1488n"[Immediately return this expression instead of assigning it to the temporary variable "res".(Ø©§¼
+n	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.( ß‡m
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(áÒ‰
+\
+java:S11260"AReplace this if-then-else statement by a single return statement.(ÄÛÀ‹ùÿÿÿÿ
+1
+java:S3626L"Remove this redundant jump.(ûÁİ…
+\
+java:S1126Z"AReplace this if-then-else statement by a single return statement.(ÄÛÀ‹ùÿÿÿÿ
+1
+java:S3626v"Remove this redundant jump.(ûÁİ…

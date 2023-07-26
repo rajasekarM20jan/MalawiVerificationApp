@@ -1,0 +1,11 @@
+
+e
+java:S1192Y"ODefine a constant instead of duplicating this literal "selectedOption" 4 times.(ãÂïŸ
+C
+java:S1604>"(Make this anonymous inner class a lambda(Ôæ¢ªûÿÿÿÿ
+e
+java:S1659"JDeclare "vcNoPrintCode" and all following declarations on a separate line.(êæ×Ãþÿÿÿÿ
+1
+java:S3626P"Remove this redundant jump.(ûÁÝ…
+f
+java:S1874ˆ"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ

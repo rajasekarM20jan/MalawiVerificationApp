@@ -1,0 +1,124 @@
+
+]
+java:S1192¤"FDefine a constant instead of duplicating this literal "rcode" 5 times.(ÅÀ»ü
+Q
+java:S1141Ş"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+g	java:S117Š"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÿ«®
+g	java:S117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¶èÈ
+>
+java:S1604t"(Make this anonymous inner class a lambda(ØÆªÆ
+D
+java:S1604Œ"(Make this anonymous inner class a lambda(Í’“Óúÿÿÿÿ
+D
+java:S1604ü"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604Ö"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604ş"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604ˆ"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604™"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604’"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+m
+java:S1104S"RMake camera a static final constant or non-public and provide accessors if needed.(Û¾ÅÛÿÿÿÿÿ
+q
+java:S1104T"VMake intentData a static final constant or non-public and provide accessors if needed.(¹È÷¬şÿÿÿÿ
+K
+java:S1444T"0Make this "public static intentData" field final(¹È÷¬şÿÿÿÿ
+I
+java:S1874S".Remove this use of "Camera"; it is deprecated.(Û¾ÅÛÿÿÿÿÿ
+Q
+java:S1874W"6Remove this use of "ProgressDialog"; it is deprecated.(ÜçÆúÿÿÿÿ
+I
+java:S1874Z".Remove this use of "Camera"; it is deprecated.(’Æ˜äûÿÿÿÿ
+M
+java:S1874Z"2Remove this use of "Parameters"; it is deprecated.(’Æ˜äûÿÿÿÿ
+m
+java:S3776m"RRefactor this method to reduce its Cognitive Complexity from 26 to the 15 allowed.(”«õûÿÿÿÿ
+I
+java:S1874{".Remove this use of "Camera"; it is deprecated.(™Ô‚ÿúÿÿÿÿ
+B
+java:S3011|",This accessibility update should be removed.(˜ÂÓ˜
+U
+java:S1117~":Rename "camera" which hides the field declared at line 83.(€Í’şÿÿÿÿ
+I
+java:S1874~".Remove this use of "Camera"; it is deprecated.(€Í’şÿÿÿÿ
+I
+java:S1874~".Remove this use of "Camera"; it is deprecated.(€Í’şÿÿÿÿ
+P
+java:S1117€":Rename "params" which hides the field declared at line 90.(«Ìl
+D
+java:S1874€".Remove this use of "Camera"; it is deprecated.(«Ìl
+H
+java:S1874€"2Remove this use of "Parameters"; it is deprecated.(«Ìl
+K
+java:S1874€"5Remove this use of "getParameters"; it is deprecated.(«Ìl
+K
+java:S1874"4Remove this use of "setFlashMode"; it is deprecated.(¹¶£Ö
+E
+java:S1874".Remove this use of "Camera"; it is deprecated.(¹¶£Ö
+I
+java:S1874"2Remove this use of "Parameters"; it is deprecated.(¹¶£Ö
+O
+java:S1874"8Remove this use of "FLASH_MODE_TORCH"; it is deprecated.(¹¶£Ö
+L
+java:S1874‚"5Remove this use of "setParameters"; it is deprecated.(‰¡Ëä
+J
+java:S1874”".Remove this use of "Camera"; it is deprecated.(™Ô‚ÿúÿÿÿÿ
+C
+java:S3011•",This accessibility update should be removed.(˜ÂÓ˜
+V
+java:S1117—":Rename "camera" which hides the field declared at line 83.(€Í’şÿÿÿÿ
+J
+java:S1874—".Remove this use of "Camera"; it is deprecated.(€Í’şÿÿÿÿ
+J
+java:S1874—".Remove this use of "Camera"; it is deprecated.(€Í’şÿÿÿÿ
+P
+java:S1117™":Rename "params" which hides the field declared at line 90.(«Ìl
+D
+java:S1874™".Remove this use of "Camera"; it is deprecated.(«Ìl
+H
+java:S1874™"2Remove this use of "Parameters"; it is deprecated.(«Ìl
+K
+java:S1874™"5Remove this use of "getParameters"; it is deprecated.(«Ìl
+P
+java:S1874š"4Remove this use of "setFlashMode"; it is deprecated.(¥©âºúÿÿÿÿ
+J
+java:S1874š".Remove this use of "Camera"; it is deprecated.(¥©âºúÿÿÿÿ
+N
+java:S1874š"2Remove this use of "Parameters"; it is deprecated.(¥©âºúÿÿÿÿ
+R
+java:S1874š"6Remove this use of "FLASH_MODE_OFF"; it is deprecated.(¥©âºúÿÿÿÿ
+L
+java:S1874›"5Remove this use of "setParameters"; it is deprecated.(‰¡Ëä
+W	java:S125¨"<This block of commented-out lines of code should be removed.(Â×ú¸øÿÿÿÿ
+—
+java:S1186Â"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¦æ—&
+n
+java:S3252¶"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(§¿ƒœ
+W	java:S125Ï"<This block of commented-out lines of code should be removed.(ì“¡ıÿÿÿÿ
+R
+java:S2696Ö"6Make the enclosing method "static" or remove this set.(ĞšŒãúÿÿÿÿ
+i
+java:S3776è"SRefactor this method to reduce its Cognitive Complexity from 136 to the 15 allowed.(ãØ„H
+O	java:S106÷"9Replace this use of System.out or System.err by a logger.(ëŸÁ
+R
+java:S1874€"6Remove this use of "ProgressDialog"; it is deprecated.(×Ô÷Æşÿÿÿÿ
+I
+java:S1874"2Remove this use of "setMessage"; it is deprecated.(šÕ²Ì
+N	java:S106–"9Replace this use of System.out or System.err by a logger.(³Ë‘G
+H
+java:S1874±",Remove this use of "Date"; it is deprecated.(ù¹Äˆûÿÿÿÿ
+B
+java:S1874´",Remove this use of "Date"; it is deprecated.(öƒT
+w
+java:S3923º"[Remove this conditional structure or edit its code blocks so that they're not all the same.(³Ïôüÿÿÿÿ
+W	java:S125½"<This block of commented-out lines of code should be removed.(·Ç€ıÿÿÿÿ
+C
+java:S1659İ"'Declare "errorText" on a separate line.(‘üüÿÿÿÿ
+H
+java:S1602î",Remove useless curly braces around statement(ÍĞ÷¶şÿÿÿÿ
+f
+java:S1874Î"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ

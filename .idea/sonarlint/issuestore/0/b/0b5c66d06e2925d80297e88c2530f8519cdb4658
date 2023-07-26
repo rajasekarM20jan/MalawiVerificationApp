@@ -1,0 +1,25 @@
+
+]
+java:S1192Í"FDefine a constant instead of duplicating this literal "rcode" 3 times.(ÅÀ»ü
+g	java:S117²"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÿ«®
+g	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¶èÈ
+D
+java:S1604ß"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604ë"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604ò"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+`
+java:S16598"JDeclare "txtVehicleval" and all following declarations on a separate line.(’Àûí
+I
+java:S1659<".Declare "dmviccertificate" on a separate line.(òçØñúÿÿÿÿ
+n
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 45 to the 15 allowed.(â±éûÿÿÿÿ
+O	java:S106­"9Replace this use of System.out or System.err by a logger.(ëŸÁ
+˜
+java:S1186á"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“–ış
+˜
+java:S1186í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(“–ış
+D	java:S108ô")Either remove or fill this block of code.(¡»¢üùÿÿÿÿ
+f
+java:S1874™"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ

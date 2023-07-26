@@ -1,0 +1,57 @@
+
+g
+java:S1192d"LDefine a constant instead of duplicating this literal "dd-MMM-yyyy" 3 times.(²»ë´şÿÿÿÿ
+_
+java:S1192x"IDefine a constant instead of duplicating this literal "tillDate" 4 times.(é÷ô¹
+]
+java:S1192É"FDefine a constant instead of duplicating this literal "rcode" 5 times.(ÅÀ»ü
+^
+java:S1192w"IDefine a constant instead of duplicating this literal "fromDate" 4 times.(²¦y
+Q
+java:S1141û"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+g	java:S117¬"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(²ÿ«®
+g	java:S117­"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š¶èÈ
+l	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û«œûÿÿÿÿ
+l	java:S117Ô"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û«œûÿÿÿÿ
+D
+java:S1604Ÿ"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+D
+java:S1604ó"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604—"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604¤"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+>
+java:S1604¹"(Make this anonymous inner class a lambda(˜¡œn
+D
+java:S1604²"(Make this anonymous inner class a lambda(˜ã¯şÿÿÿÿ
+d
+java:S2259‘"NA "NullPointerException" could be thrown; "datePickerDialog" is nullable here.(Œ§·X
+<
+java:S1659G"&Declare "tillDate" on a separate line.(¯ª†È
+Q
+java:S1874E"6Remove this use of "ProgressDialog"; it is deprecated.(ÜçÆúÿÿÿÿ
+N	java:S106j"9Replace this use of System.out or System.err by a logger.(×²¨š
+;
+java:S1659p"%Declare "endDate" on a separate line.(ÉÈç»
+S	java:S106|"9Replace this use of System.out or System.err by a logger.(¢ÙŒøÿÿÿÿ
+l
+java:S3252€"PUse static access with "android.view.ViewGroup$LayoutParams" for "MATCH_PARENT".(ÂìòĞüÿÿÿÿ
+l
+java:S3252€"PUse static access with "android.view.ViewGroup$LayoutParams" for "WRAP_CONTENT".(ÂìòĞüÿÿÿÿ
+j
+java:S3776‹"SRefactor this method to reduce its Cognitive Complexity from 148 to the 15 allowed.(½ßåì
+O	java:S106›"9Replace this use of System.out or System.err by a logger.(ëŸÁ
+R
+java:S1874£"6Remove this use of "ProgressDialog"; it is deprecated.(×Ô÷Æşÿÿÿÿ
+I
+java:S1874¤"2Remove this use of "setMessage"; it is deprecated.(šÕ²Ì
+^
+java:S1659Ô"BDeclare "ChaNo" and all following declarations on a separate line.(Û«œûÿÿÿÿ
+C
+java:S1659ú"'Declare "errorText" on a separate line.(‘üüÿÿÿÿ
+H
+java:S1602‡",Remove useless curly braces around statement(ÍĞ÷¶şÿÿÿÿ
+d	java:S100â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ıÉ¥¾
+f
+java:S1874˜"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(œƒƒ©ùÿÿÿÿ

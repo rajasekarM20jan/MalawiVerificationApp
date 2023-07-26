@@ -1,0 +1,9 @@
+
+P
+java:S1118":Add a private constructor to hide the implicit public one.(‘˜”Í
+\
+java:S1126"AReplace this if-then-else statement by a single return statement.(¿ÃÎúÿÿÿÿ
+g
+java:S2677"LUse or store the value returned from "readLine" instead of throwing it away.(¿ÃÎúÿÿÿÿ
+E
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ

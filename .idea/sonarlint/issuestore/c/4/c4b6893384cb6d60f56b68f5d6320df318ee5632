@@ -1,0 +1,147 @@
+
+Q
+java:S1141¯"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+Q
+java:S1141´"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ
+l	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù·ìÓûÿÿÿÿ
+l	java:S117’"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù·ìÓûÿÿÿÿ
+g	java:S117ª"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€ğ´
+g	java:S117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ºÕÔ«
+?
+java:S1604˜"(Make this anonymous inner class a lambda(­£ü¢
+i
+java:S1104;"SMake context a static final constant or non-public and provide accessors if needed.(Òò®­
+r
+java:S1104<"WMake uniqueidval a static final constant or non-public and provide accessors if needed.(îíã÷ùÿÿÿÿ
+p
+java:S1104>"[Make locationManager a static final constant or non-public and provide accessors if needed.(³âÉ	
+u
+java:S1104I"ZMake certificateNum a static final constant or non-public and provide accessors if needed.(ñõÍ¯ÿÿÿÿÿ
+q
+java:S1104I"VMake vehicleNum a static final constant or non-public and provide accessors if needed.(ñõÍ¯ÿÿÿÿÿ
+w
+java:S1104I"\Make insuranceCompany a static final constant or non-public and provide accessors if needed.(ñõÍ¯ÿÿÿÿÿ
+q
+java:S1104I"VMake chassisNum a static final constant or non-public and provide accessors if needed.(ñõÍ¯ÿÿÿÿÿ
+v
+java:S1104J"[Make policyStartDate a static final constant or non-public and provide accessors if needed.(‚€Õ ûÿÿÿÿ
+t
+java:S1104J"YMake policyEndDate a static final constant or non-public and provide accessors if needed.(‚€Õ ûÿÿÿÿ
+k
+java:S1104J"PMake make a static final constant or non-public and provide accessors if needed.(‚€Õ ûÿÿÿÿ
+l
+java:S1104J"QMake model a static final constant or non-public and provide accessors if needed.(‚€Õ ûÿÿÿÿ
+t
+java:S1104J"YMake cancelledDate a static final constant or non-public and provide accessors if needed.(‚€Õ ûÿÿÿÿ
+v
+java:S1104J"[Make cancelledReason a static final constant or non-public and provide accessors if needed.(‚€Õ ûÿÿÿÿ
+m
+java:S1104J"RMake status a static final constant or non-public and provide accessors if needed.(‚€Õ ûÿÿÿÿ
+x
+java:S1104J"]Make yearOfManufacture a static final constant or non-public and provide accessors if needed.(‚€Õ ûÿÿÿÿ
+t
+java:S1104K"YMake vehicleRegNum a static final constant or non-public and provide accessors if needed.(¡³à„üÿÿÿÿ
+m
+java:S1104K"RMake chaNum a static final constant or non-public and provide accessors if needed.(¡³à„üÿÿÿÿ
+p
+java:S1104K"UMake engineNum a static final constant or non-public and provide accessors if needed.(¡³à„üÿÿÿÿ
+p
+java:S1104K"UMake coverType a static final constant or non-public and provide accessors if needed.(¡³à„üÿÿÿÿ
+p
+java:S1104K"UMake validFrom a static final constant or non-public and provide accessors if needed.(¡³à„üÿÿÿÿ
+l
+java:S1104K"QMake crRef a static final constant or non-public and provide accessors if needed.(¡³à„üÿÿÿÿ
+q
+java:S1104K"VMake crComments a static final constant or non-public and provide accessors if needed.(¡³à„üÿÿÿÿ
+C
+java:S1444;"-Make this "public static context" field final(Òò®­
+L
+java:S1444<"1Make this "public static uniqueidval" field final(îíã÷ùÿÿÿÿ
+O
+java:S1444I"4Make this "public static certificateNum" field final(ñõÍ¯ÿÿÿÿÿ
+K
+java:S1444I"0Make this "public static vehicleNum" field final(ñõÍ¯ÿÿÿÿÿ
+Q
+java:S1444I"6Make this "public static insuranceCompany" field final(ñõÍ¯ÿÿÿÿÿ
+K
+java:S1444I"0Make this "public static chassisNum" field final(ñõÍ¯ÿÿÿÿÿ
+P
+java:S1444J"5Make this "public static policyStartDate" field final(‚€Õ ûÿÿÿÿ
+N
+java:S1444J"3Make this "public static policyEndDate" field final(‚€Õ ûÿÿÿÿ
+E
+java:S1444J"*Make this "public static make" field final(‚€Õ ûÿÿÿÿ
+F
+java:S1444J"+Make this "public static model" field final(‚€Õ ûÿÿÿÿ
+N
+java:S1444J"3Make this "public static cancelledDate" field final(‚€Õ ûÿÿÿÿ
+P
+java:S1444J"5Make this "public static cancelledReason" field final(‚€Õ ûÿÿÿÿ
+G
+java:S1444J",Make this "public static status" field final(‚€Õ ûÿÿÿÿ
+R
+java:S1444J"7Make this "public static yearOfManufacture" field final(‚€Õ ûÿÿÿÿ
+N
+java:S1444K"3Make this "public static vehicleRegNum" field final(¡³à„üÿÿÿÿ
+G
+java:S1444K",Make this "public static chaNum" field final(¡³à„üÿÿÿÿ
+J
+java:S1444K"/Make this "public static engineNum" field final(¡³à„üÿÿÿÿ
+J
+java:S1444K"/Make this "public static coverType" field final(¡³à„üÿÿÿÿ
+J
+java:S1444K"/Make this "public static validFrom" field final(¡³à„üÿÿÿÿ
+F
+java:S1444K"+Make this "public static crRef" field final(¡³à„üÿÿÿÿ
+K
+java:S1444K"0Make this "public static crComments" field final(¡³à„üÿÿÿÿ
+t	java:S1159"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(“°£şÿÿÿÿ
+o	java:S115:"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ÛõÚö
+
+java:S1186§"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(òğí¯ûÿÿÿÿ
+b
+java:S1659I"GDeclare "vehicleNum" and all following declarations on a separate line.(ñõÍ¯ÿÿÿÿÿ
+^
+java:S1659K"CDeclare "chaNum" and all following declarations on a separate line.(¡³à„üÿÿÿÿ
+8
+java:S2386?"Make this member "protected".(²¡™Úøÿÿÿÿ
+L
+java:S2696S"6Make the enclosing method "static" or remove this set.(—ÈëÕ
+V	java:S125V"<This block of commented-out lines of code should be removed.(şÌİìÿÿÿÿÿ
+K
+java:S2696q"6Make the enclosing method "static" or remove this set.(ò·õY
+f
+java:S1874†"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(Ó»×¶şÿÿÿÿ
+X
+java:S1874"<Remove this use of "getActiveNetworkInfo"; it is deprecated.(ˆÛ¡Çøÿÿÿÿ
+X
+java:S1874"<Remove this use of "getActiveNetworkInfo"; it is deprecated.(ˆÛ¡Çøÿÿÿÿ
+O
+java:S1874"3Remove this use of "isConnected"; it is deprecated.(ˆÛ¡Çøÿÿÿÿ
+d	java:S100Â"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÑµÛÓ
+X
+java:S1854Ò"<Remove this useless assignment to local variable "address1".(©¢©šÿÿÿÿÿ
+I
+java:S1481Ò"-Remove this unused "address1" local variable.(©¢©šÿÿÿÿÿ
+N
+java:S1874Ô"7Remove this use of "formatIpAddress"; it is deprecated.(ÒËŒ†
+P
+java:S1874Ô"9Remove this use of "getConnectionInfo"; it is deprecated.(ÒËŒ†
+K
+java:S1874Ô"4Remove this use of "getIpAddress"; it is deprecated.(ÒËŒ†
+Q	java:S125á"<This block of commented-out lines of code should be removed.(®·º3
+O	java:S106ç"9Replace this use of System.out or System.err by a logger.(ãÕŞ‰
+K
+java:S1874ô"/Remove this use of "Handler"; it is deprecated.(§çµüÿÿÿÿ
+n
+java:S3252‰"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí
+n
+java:S3252‰"WUse static access with "androidx.core.content.ContextCompat" for "checkSelfPermission".(¥êêí
+O
+java:S1905"3Remove this unnecessary cast to "LocationListener".(½ÑØ„ıÿÿÿÿ
+2
+java:S3626¼"Remove this redundant jump.(ûÁİ…
+R
+java:S1874²";Remove this use of "updateConfiguration"; it is deprecated.(‰õ¨ó
+2
+java:S3626È"Remove this redundant jump.(ûÁİ…
