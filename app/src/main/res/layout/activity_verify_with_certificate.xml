@@ -60,6 +60,9 @@
                         android:fontFamily="@font/latinotypeantartidaroundedmedium"
                         android:layout_marginEnd="@dimen/activity_margin_5dp"
                         android:textSize="@dimen/activity_margin_18dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:maxLength="50"
                         android:background="@drawable/edit_text"
                         android:hint="@string/certNumber"
                         android:padding="@dimen/activity_margin_10dp" />

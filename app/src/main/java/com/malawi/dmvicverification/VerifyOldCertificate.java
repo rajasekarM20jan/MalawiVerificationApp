@@ -9,6 +9,7 @@ import static com.malawi.dmvicverification.MainActivity.crRef;
 import static com.malawi.dmvicverification.MainActivity.engineNum;
 import static com.malawi.dmvicverification.MainActivity.isNetworkConnected;
 import static com.malawi.dmvicverification.MainActivity.loadlocale;
+import static com.malawi.dmvicverification.MainActivity.policyStartDate;
 import static com.malawi.dmvicverification.MainActivity.status;
 import static com.malawi.dmvicverification.MainActivity.unAuthorize;
 import static com.malawi.dmvicverification.MainActivity.validFrom;
@@ -42,7 +43,9 @@ import com.google.gson.JsonObject;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
@@ -248,7 +251,10 @@ public class VerifyOldCertificate extends AppCompatActivity {
                                             chaNum=insuranceDetails.getString("chassisNumber");
                                             engineNum=insuranceDetails.getString("engineNumber");
                                             coverType=insuranceDetails.getString("typeOfCover");
-                                            validFrom=insuranceDetails.getString("validFrom");
+                                            SimpleDateFormat sf=new SimpleDateFormat("dd-MMM-yyyy");
+                                            String startDate=insuranceDetails.getString("validFrom");
+                                            Date d=new Date(startDate);
+                                            validFrom=sf.format(d);
                                             crRef=(insuranceDetails.getString("crRef")!=null)?insuranceDetails.getString("crRef"):"";
                                             crComments=(insuranceDetails.getString("crComments")!=null)?insuranceDetails.getString("crComments"):"";
                                             status="Active";

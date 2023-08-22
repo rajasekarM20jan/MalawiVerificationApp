@@ -85,13 +85,13 @@ public class VerificationResultOld extends AppCompatActivity {
             doneButton.setOnClickListener(l->onBackPressed());
             if(!status.equals("Invalid")){
                 dmviccertificate.setVisibility(View.VISIBLE);
-                if((crComments.equals("")|| crComments == null ||crComments.equals("null")) &&(crRef.equals("")|| crRef == null|| crRef.equals("null"))){
+                if((crComments.equals("")|| crComments == null ||crComments.equals("null")) ||(crRef.equals("")|| crRef == null|| crRef.equals("null"))){
                     linearcancelid.setVisibility(View.GONE);
                 }
                 else {
                     linearcancelid.setVisibility(View.VISIBLE);
-                    txtcanceldtval.setText(cancelledDate);
-                    txtcancelresval.setText(cancelledDate);
+                    txtcanceldtval.setText(crRef);
+                    txtcancelresval.setText(crComments);
                 }
                 txtVehicleval.setText(vehicleRegNum);
                 txtChassisval.setText(chaNum);

@@ -96,7 +96,7 @@
                             android:fontFamily="@font/latinotypeantartidaroundedmedium"
                             android:buttonTint="@color/apptheme"
                             android:text="@string/regNum"
-                            android:textSize="@dimen/activity_margin_14dp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:textStyle="bold"
                             android:textColor="@color/black"/>
                         <RadioButton
@@ -105,7 +105,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/chassisNum"
-                            android:textSize="@dimen/activity_margin_14dp"
+                            android:textSize="@dimen/activity_margin_16dp"
                             android:fontFamily="@font/latinotypeantartidaroundedmedium"
                             android:textStyle="bold"
                             android:buttonTint="@color/apptheme"
@@ -120,6 +120,9 @@
                         android:layout_marginStart="@dimen/activity_margin_5dp"
                         android:layout_marginTop="@dimen/activity_margin_10dp"
                         android:layout_marginEnd="@dimen/activity_margin_5dp"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:maxLength="50"
                         android:fontFamily="@font/latinotypeantartidaroundedmedium"
                         android:background="@drawable/edit_text"
                         android:hint="@string/regNum"
