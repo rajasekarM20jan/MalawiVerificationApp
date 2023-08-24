@@ -30,6 +30,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
+import android.net.Uri;
 import android.net.wifi.WifiManager;
 import android.os.AsyncTask;
 import android.os.Build;
@@ -59,6 +60,15 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     public static Context context;
     public static String uniqueidval;
     public static final int REQUEST_PERMISSION = 100;
+
+    public static final int PERMISSIONS_REQUEST = 99;
+    public static final String PERMISSION_CAMERA = Manifest.permission.CAMERA;
+    public static final String PERMISSION_STORAGE = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+    public static final String PERMISSION_READSTORAGE = Manifest.permission.READ_EXTERNAL_STORAGE;
+    public static final String PERMISSION_LOCATION = Manifest.permission.ACCESS_FINE_LOCATION;
+    public static final String PERMISSION_Readphonestate = Manifest.permission.READ_PHONE_STATE;
+    public static final String PERMISSION_RECORD_AUDIO = Manifest.permission.RECORD_AUDIO;
+    public static final String PERMISSION_READ_CONTACTS = Manifest.permission.READ_CONTACTS;
     public LocationManager locationManager;
     public static final String[] PERMISSIONS = {
             Manifest.permission.ACCESS_NETWORK_STATE,
@@ -112,35 +122,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
         uniqueidval = Settings.Secure.getString(context.getContentResolver(),Settings.Secure.ANDROID_ID);
         getUserLocationForEvery2minutes();
-        requestPermissions();
     }
 
-    //checking the permissions
-    public void requestPermissions() {
-        List<String> unGrantedPermissions = new ArrayList<>();
-        for (String permission : PERMISSIONS) {
-            if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
-                unGrantedPermissions.add(permission);
-            }
-        }
-
-        if (!unGrantedPermissions.isEmpty()) {
-            ActivityCompat.requestPermissions(this, unGrantedPermissions.toArray(new String[0]), REQUEST_PERMISSION);
-        }
-    }
-
-    //on result of permissions
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        if (requestCode == REQUEST_PERMISSION) {
-            for (int grantResult : grantResults) {
-                if (grantResult != PackageManager.PERMISSION_GRANTED) {
-                    requestPermissions();
-                }
-            }
-        }
-    }
 
     // To alert the user using alert dialog.
     public static AlertDialog.Builder alertTheUser(Context context, String Title, String Message) {
@@ -177,13 +160,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             } catch (Exception ex) {
                 ex.printStackTrace();
             }
-            try {
+            /*try {
                 network_enabled = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
             } catch (Exception ex) {
                 ex.printStackTrace();
-            }
+            }*/
             // returning the values.
-            return gps_enabled || network_enabled;
+            /*return gps_enabled || network_enabled;*/
+            return gps_enabled;
         }catch (Exception e){
             e.printStackTrace();
         }

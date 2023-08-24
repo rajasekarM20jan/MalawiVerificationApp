@@ -96,12 +96,10 @@ public class QrCodeScanner extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         context=this;
         Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Scan Qr Code");
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Scan Disc");
         Intent intent=getIntent();
         selectedOption=intent.getStringExtra("selectedOption");
         initViews();
-
-
     }
 
 

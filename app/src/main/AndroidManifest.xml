@@ -31,6 +31,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MalawiVerificationApp">
         <activity
+            android:name=".TermsDash"
+            android:exported="false" />
+        <activity
             android:name=".TermsPage"
             android:exported="false">
             <meta-data

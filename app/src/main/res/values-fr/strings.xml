@@ -91,6 +91,10 @@
     <string name="stat">Statut</string>
     <string name="agreeBtn">J\'accepte les termes et conditions</string>
     <string name="yom">Année de fabrication</string>
+    <string name="SgnOt">Se déconnecter</string>
+    <string name="trmsNcnd">Termes et conditions</string>
+    <string name="logoutMsg">Êtes-vous sûr de vouloir vous déconnecter ?</string>
+
     <string-array name="insuranceSpinnerArray">
         <item>--Select--</item>
         <item>NICO</item>

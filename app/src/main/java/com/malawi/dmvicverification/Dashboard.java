@@ -4,28 +4,35 @@ import static com.malawi.dmvicverification.MainActivity.alertTheUser;
 import static com.malawi.dmvicverification.MainActivity.loadlocale;
 import static com.malawi.dmvicverification.MainActivity.setLocale;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.res.Resources;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Window;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 public class Dashboard extends AppCompatActivity {
 
     CardView vcPrintCode,vcNoPrintCode,vcSecure,verifyHistory,vcWithCertificate;
     Context context;
     Intent nextPage;
-    ImageView switchLanguageIcon;
-    LinearLayout parentLayout;
+    ImageView switchLanguageIcon,menuButton;
+    ConstraintLayout parentLayout;
+    NavigationView menuNavigation;
+    LinearLayout dashboardLayout,powerOff;
+    View dummyView;
+    Boolean isMenuNotOpen;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +56,12 @@ public class Dashboard extends AppCompatActivity {
             verifyHistory=findViewById(R.id.verifyHistory);
             vcWithCertificate=findViewById(R.id.verifyWithCertificate);
             switchLanguageIcon=findViewById(R.id.switchLanguageIcon);
+            menuButton=findViewById(R.id.menuButton);
+            menuNavigation=findViewById(R.id.menuNavigation);
+            dashboardLayout=findViewById(R.id.dashboardLayout);
+            powerOff = findViewById(R.id.powerOff);
+            dummyView=findViewById(R.id.dummyView);
+            isMenuNotOpen=true;
             basicFunctions();
         }catch (Exception e){
             e.printStackTrace();
@@ -92,6 +105,82 @@ public class Dashboard extends AppCompatActivity {
                     e.printStackTrace();
                 }
             });
+
+            menuButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    try{
+                        if(isMenuNotOpen){
+                            isMenuNotOpen=false;
+                            dashboardLayout.setEnabled(false);
+                            dummyView.setVisibility(View.VISIBLE);
+                            menuNavigation.setVisibility(View.VISIBLE);
+                        }else{
+                            isMenuNotOpen=true;
+                            dashboardLayout.setEnabled(true);
+                            dummyView.setVisibility(View.GONE);
+                            menuNavigation.setVisibility(View.GONE);
+                        }
+                    }catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            });
+
+            dummyView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    isMenuNotOpen=true;
+                    dashboardLayout.setEnabled(true);
+                    dummyView.setVisibility(View.GONE);
+                    menuNavigation.setVisibility(View.GONE);
+                }
+            });
+
+            //on item selected listener for navigation view option
+            menuNavigation.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    switch (item.getItemId()){
+                        case R.id.termsAndConditions: {
+                            startActivity(new Intent(context,TermsDash.class));
+                            finish();
+                        }
+                    }
+                    return true;
+                }
+            });
+
+            powerOff.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    try {
+                        alertTheUser(context, "", getString(R.string.logoutMsg))
+                                .setIcon(getDrawable(R.drawable.warning))
+                                .setPositiveButton("No", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        dialogInterface.dismiss();
+                                    }
+                                })
+                                .setNegativeButton("Yes", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+                                        DataBaseHelper mydb = new DataBaseHelper(context);
+                                        if (mydb.getTokenDetails().getCount() != 0) {
+                                            mydb.deleteTokenData();
+                                        }
+                                        startActivity(new Intent(context,Authority.class));
+                                        dialogInterface.dismiss();
+                                    }
+                                }).show();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+
             vcNoPrintCode.setOnClickListener(l->{
                 try {
                     nextPage = new Intent(context, VerifyOldCertificate.class);

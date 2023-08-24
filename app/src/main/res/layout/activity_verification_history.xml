@@ -9,13 +9,13 @@
 
     <ImageView
         android:id="@+id/menuIcon"
-        android:layout_width="@dimen/activity_margin_40dp"
-        android:layout_height="@dimen/activity_margin_40dp"
+        android:layout_width="@dimen/activity_margin_35dp"
+        android:layout_height="@dimen/activity_margin_35dp"
         android:layout_gravity="end|center_vertical"
         android:layout_marginTop="@dimen/activity_margin_20dp"
         android:layout_marginEnd="@dimen/activity_margin_20dp"
         app:tint="@color/apptheme"
-        android:src="@drawable/menu" />
+        android:src="@drawable/filter" />
 
 
 

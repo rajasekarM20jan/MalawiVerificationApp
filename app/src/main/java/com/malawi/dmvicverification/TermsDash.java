@@ -11,33 +11,30 @@ import android.widget.Button;
 
 import java.util.Objects;
 
-public class TermsPage extends AppCompatActivity {
+public class TermsDash extends AppCompatActivity {
 
     Context context;
     Activity activity;
-    Button acceptTerms;
     WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_terms_page);
+        setContentView(R.layout.activity_terms_dash);
         context=this;
         activity=this;
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Terms And Conditions");
         try{
-
-            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
-            Objects.requireNonNull(getSupportActionBar()).setTitle("Terms And Conditions");
             init();
         }catch (Exception e){
             e.printStackTrace();
         }
     }
+
     void init(){
         try{
             webView=findViewById(R.id.webView);
             webView.loadUrl("https://www.bimayangu.ke/api/document/ProfileTermsCondition.html");
-            acceptTerms=findViewById(R.id.acceptTerms);
-            acceptTerms.setOnClickListener(l->startActivity(new Intent(context,Authority.class)));
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -52,6 +49,7 @@ public class TermsPage extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
+            startActivity(new Intent(context, Dashboard.class));
             finish();
         }catch (Exception e){
             e.printStackTrace();

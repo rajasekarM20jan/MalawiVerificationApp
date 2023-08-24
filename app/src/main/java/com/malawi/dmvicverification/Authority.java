@@ -1,5 +1,13 @@
 package com.malawi.dmvicverification;
 
+import static com.malawi.dmvicverification.MainActivity.PERMISSIONS_REQUEST;
+import static com.malawi.dmvicverification.MainActivity.PERMISSION_CAMERA;
+import static com.malawi.dmvicverification.MainActivity.PERMISSION_LOCATION;
+import static com.malawi.dmvicverification.MainActivity.PERMISSION_READSTORAGE;
+import static com.malawi.dmvicverification.MainActivity.PERMISSION_READ_CONTACTS;
+import static com.malawi.dmvicverification.MainActivity.PERMISSION_RECORD_AUDIO;
+import static com.malawi.dmvicverification.MainActivity.PERMISSION_Readphonestate;
+import static com.malawi.dmvicverification.MainActivity.PERMISSION_STORAGE;
 import static com.malawi.dmvicverification.MainActivity.alertTheUser;
 import static com.malawi.dmvicverification.MainActivity.checkGPSStatus;
 import static com.malawi.dmvicverification.MainActivity.isNetworkConnected;
@@ -7,6 +15,8 @@ import static com.malawi.dmvicverification.MainActivity.loadlocale;
 import static com.malawi.dmvicverification.MainActivity.setLocale;
 import static com.malawi.dmvicverification.MainActivity.unAuthorize;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
@@ -14,6 +24,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.database.Cursor;
@@ -21,6 +32,7 @@ import android.graphics.Color;
 
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.GradientDrawable;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
@@ -77,6 +89,81 @@ public class Authority extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
+    private boolean hasPermission() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            return checkSelfPermission(PERMISSION_CAMERA) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_LOCATION) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_STORAGE) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_READSTORAGE) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_Readphonestate) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_RECORD_AUDIO) ==
+                    PackageManager.PERMISSION_GRANTED;
+        } else {
+            return checkSelfPermission(PERMISSION_CAMERA) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_LOCATION) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_STORAGE) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_READSTORAGE) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_Readphonestate) ==
+                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_RECORD_AUDIO) ==
+                    PackageManager.PERMISSION_GRANTED ;
+        }
+    }
+    //checking the permissions
+    private void requestPermissions() {
+        try {
+            if (shouldShowRequestPermissionRationale(PERMISSION_CAMERA) ||
+                    shouldShowRequestPermissionRationale(PERMISSION_RECORD_AUDIO) ||
+                    shouldShowRequestPermissionRationale(PERMISSION_STORAGE) ||
+                    shouldShowRequestPermissionRationale(PERMISSION_READSTORAGE) ||
+                    shouldShowRequestPermissionRationale(PERMISSION_LOCATION) ||
+                    shouldShowRequestPermissionRationale(PERMISSION_READ_CONTACTS) ||
+                    shouldShowRequestPermissionRationale(PERMISSION_Readphonestate) ||
+                    shouldShowRequestPermissionRationale(PERMISSION_CAMERA)) {
+            }
+
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                requestPermissions(new String[]{PERMISSION_LOCATION, PERMISSION_CAMERA, PERMISSION_STORAGE, PERMISSION_READSTORAGE, PERMISSION_Readphonestate, PERMISSION_RECORD_AUDIO, PERMISSION_READ_CONTACTS}, PERMISSIONS_REQUEST);
+            } else {
+                requestPermissions(new String[]{PERMISSION_LOCATION, PERMISSION_CAMERA, PERMISSION_STORAGE, PERMISSION_READSTORAGE, PERMISSION_Readphonestate, PERMISSION_RECORD_AUDIO, PERMISSION_READ_CONTACTS}, PERMISSIONS_REQUEST);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    //on result of permissions
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if (requestCode == PERMISSIONS_REQUEST) {
+            boolean allPermissionsGranted = true;
+            for (int grantResult : grantResults) {
+                if (grantResult != PackageManager.PERMISSION_GRANTED) {
+                    allPermissionsGranted = false;
+                    break;
+                }
+            }
+            if (!allPermissionsGranted) {
+                // Redirect to app settings permissions page
+                AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+                dialog.setTitle("Dear User!");
+                dialog.setMessage("We request you to allow the required permissions inorder to a stable app performance.");
+                dialog.setPositiveButton("Go To Settings", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                        Uri uri = Uri.fromParts("package", getPackageName(), null);
+                        intent.setData(uri);
+                        startActivity(intent);
+                    }
+                });
+                dialog.setCancelable(false);
+                dialog.show();
+            }
+        }
+    }
+
     public void showChangeLanguage(Activity activity) {
         try {
 
@@ -108,8 +195,20 @@ public class Authority extends AppCompatActivity {
     void basicFunctions(){
         try{
             switchLanguageIcon.setOnClickListener(l->showChangeLanguage(Authority.this));
-            BtnLoginPolice.setOnClickListener(l->startActivity(new Intent(context,Login.class)));
-            BtnLoginGuest.setOnClickListener(l->confirmAuthority());
+            BtnLoginPolice.setOnClickListener(l->{
+                if(!hasPermission()){
+                    requestPermissions();
+                }else{
+                    startActivity(new Intent(context,Login.class));
+                }
+            });
+            BtnLoginGuest.setOnClickListener(l->{
+                if(!hasPermission()){
+                    requestPermissions();
+                }else {
+                    confirmAuthority();
+                }
+            });
         }catch (Exception e){
             e.printStackTrace();
         }
