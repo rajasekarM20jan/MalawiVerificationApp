@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">IAM Certificate Smart</string>
+    <string name="app_name" translatable="false">IAM SmartApp</string>
     <string name="gps_not_enabled">GPS locations is not enabled.Please enable it</string>
     <string name="noNetwork">Please check your network connection</string>
     <string name="enter_phone">Verify your phone number</string>
@@ -78,14 +78,14 @@
     <string name="dummy" translatable="false">XXXXXXXX</string>
     <string name="no_records_to_display" translatable="false">No Records to display</string>
     <string name="certVer">Certificate Verification!</string>
-    <string name="getStrt">Getting Started</string>
-    <string name="cnfmMsg">IAM verification will send you an OTP to verify your mobile number</string>
+    <string name="getStrt">Login as Police!</string>
+    <string name="cnfmMsg">IAM Smart App verification will send you an OTP to verify your mobile number</string>
     <string name="phHint">Enter phone number</string>
-    <string name="aldn">Almost Done</string>
-    <string name="actcodeTxt">Please enter the activation code sent to your mobile number.</string>
+    <string name="aldn">OTP Verification</string>
+    <string name="actcodeTxt">Please enter the OTP sent to your mobile number.</string>
     <string name="dummyNum">+265760489032</string>
     <string name="wrngNum">Not your phone number? </string>
-    <string name="clh">Click Here</string>
+    <string name="clh"><u>Click Here</u></string>
     <string name="skip">SKIP</string>
     <string name="prev"><![CDATA[<Previous]]></string>
     <string name="next"><![CDATA[Next>]]></string>

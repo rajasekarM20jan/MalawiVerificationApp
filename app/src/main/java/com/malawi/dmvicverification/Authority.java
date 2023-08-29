@@ -94,38 +94,25 @@ public class Authority extends AppCompatActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             return checkSelfPermission(PERMISSION_CAMERA) ==
                     PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_LOCATION) ==
-                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_STORAGE) ==
-                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_READSTORAGE) ==
-                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_Readphonestate) ==
-                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_RECORD_AUDIO) ==
                     PackageManager.PERMISSION_GRANTED;
         } else {
             return checkSelfPermission(PERMISSION_CAMERA) ==
                     PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_LOCATION) ==
-                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_STORAGE) ==
-                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_READSTORAGE) ==
-                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_Readphonestate) ==
-                    PackageManager.PERMISSION_GRANTED && checkSelfPermission(PERMISSION_RECORD_AUDIO) ==
-                    PackageManager.PERMISSION_GRANTED ;
+                    PackageManager.PERMISSION_GRANTED;
         }
     }
     //checking the permissions
     private void requestPermissions() {
         try {
             if (shouldShowRequestPermissionRationale(PERMISSION_CAMERA) ||
-                    shouldShowRequestPermissionRationale(PERMISSION_RECORD_AUDIO) ||
-                    shouldShowRequestPermissionRationale(PERMISSION_STORAGE) ||
-                    shouldShowRequestPermissionRationale(PERMISSION_READSTORAGE) ||
                     shouldShowRequestPermissionRationale(PERMISSION_LOCATION) ||
-                    shouldShowRequestPermissionRationale(PERMISSION_READ_CONTACTS) ||
-                    shouldShowRequestPermissionRationale(PERMISSION_Readphonestate) ||
-                    shouldShowRequestPermissionRationale(PERMISSION_CAMERA)) {
+                    shouldShowRequestPermissionRationale(PERMISSION_Readphonestate)) {
             }
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-                requestPermissions(new String[]{PERMISSION_LOCATION, PERMISSION_CAMERA, PERMISSION_STORAGE, PERMISSION_READSTORAGE, PERMISSION_Readphonestate, PERMISSION_RECORD_AUDIO, PERMISSION_READ_CONTACTS}, PERMISSIONS_REQUEST);
+                requestPermissions(new String[]{PERMISSION_LOCATION, PERMISSION_CAMERA, PERMISSION_Readphonestate}, PERMISSIONS_REQUEST);
             } else {
-                requestPermissions(new String[]{PERMISSION_LOCATION, PERMISSION_CAMERA, PERMISSION_STORAGE, PERMISSION_READSTORAGE, PERMISSION_Readphonestate, PERMISSION_RECORD_AUDIO, PERMISSION_READ_CONTACTS}, PERMISSIONS_REQUEST);
+                requestPermissions(new String[]{PERMISSION_LOCATION, PERMISSION_CAMERA, PERMISSION_Readphonestate}, PERMISSIONS_REQUEST);
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -272,6 +272,7 @@ public class Login extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
+            startActivity(new Intent(context, Authority.class));
             finish();
         }catch (Exception e){
             e.printStackTrace();

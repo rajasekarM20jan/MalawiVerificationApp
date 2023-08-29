@@ -20,7 +20,7 @@
             android:layout_marginBottom="@dimen/activity_margin_30dp"
             android:weightSum="1">
 
-            <ImageView
+            <!--<ImageView
                 android:id="@+id/menuButton"
                 android:layout_width="@dimen/activity_margin_40dp"
                 android:layout_height="@dimen/activity_margin_40dp"
@@ -28,7 +28,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/dashText"
-                android:src="@drawable/menu"/>
+                android:src="@drawable/menu"/>-->
 
             <TextView
                 android:id="@+id/dashText"

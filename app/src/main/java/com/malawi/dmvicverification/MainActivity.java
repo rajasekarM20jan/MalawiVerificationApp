@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
 
             DataBaseHelper mydb = new DataBaseHelper(context);
             if (mydb.getTokenDetails().getCount() == 0) {
-                startActivity(new Intent(context,LandingPage.class));
+                startActivity(new Intent(context, TermsPage.class));
             }else {
                 startActivity(new Intent(context,Dashboard.class));
             }

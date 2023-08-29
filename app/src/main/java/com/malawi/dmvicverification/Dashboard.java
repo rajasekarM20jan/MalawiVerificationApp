@@ -27,7 +27,7 @@ public class Dashboard extends AppCompatActivity {
     CardView vcPrintCode,vcNoPrintCode,vcSecure,verifyHistory,vcWithCertificate;
     Context context;
     Intent nextPage;
-    ImageView switchLanguageIcon,menuButton;
+    ImageView switchLanguageIcon;
     ConstraintLayout parentLayout;
     NavigationView menuNavigation;
     LinearLayout dashboardLayout,powerOff;
@@ -56,7 +56,7 @@ public class Dashboard extends AppCompatActivity {
             verifyHistory=findViewById(R.id.verifyHistory);
             vcWithCertificate=findViewById(R.id.verifyWithCertificate);
             switchLanguageIcon=findViewById(R.id.switchLanguageIcon);
-            menuButton=findViewById(R.id.menuButton);
+            /*menuButton=findViewById(R.id.menuButton);*/
             menuNavigation=findViewById(R.id.menuNavigation);
             dashboardLayout=findViewById(R.id.dashboardLayout);
             powerOff = findViewById(R.id.powerOff);
@@ -106,7 +106,7 @@ public class Dashboard extends AppCompatActivity {
                 }
             });
 
-            menuButton.setOnClickListener(new View.OnClickListener() {
+            /*menuButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     try{
@@ -125,7 +125,7 @@ public class Dashboard extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-            });
+            });*/
 
             dummyView.setOnClickListener(new View.OnClickListener() {
                 @Override

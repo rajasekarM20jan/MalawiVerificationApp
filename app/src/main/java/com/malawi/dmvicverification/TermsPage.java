@@ -25,7 +25,7 @@ public class TermsPage extends AppCompatActivity {
         activity=this;
         try{
 
-            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
+            Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
             Objects.requireNonNull(getSupportActionBar()).setTitle("Terms And Conditions");
             init();
         }catch (Exception e){
@@ -52,7 +52,7 @@ public class TermsPage extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         try {
-            finish();
+            finishAffinity();
         }catch (Exception e){
             e.printStackTrace();
         }
