@@ -1,5 +1,7 @@
 package com.malawi.dmvicverification;
 
+import static com.malawi.dmvicverification.MainActivity.base_version;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -13,7 +15,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static final String QrTable="qrTable";
 
     public DataBaseHelper(@Nullable Context context) {
-        super(context, "malawiVerificationApp", null, 1);
+        super(context, "malawiVerificationApp", null, base_version);
     }
 
     @Override

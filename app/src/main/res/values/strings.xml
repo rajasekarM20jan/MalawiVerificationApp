@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">IAM SmartApp</string>
+    <string name="app_name" translatable="false">IAM Insurance SmartApp</string>
     <string name="gps_not_enabled">GPS locations is not enabled.Please enable it</string>
     <string name="noNetwork">Please check your network connection</string>
     <string name="enter_phone">Verify your phone number</string>
@@ -96,6 +96,8 @@
     <string name="SgnOt">Log out</string>
     <string name="trmsNcnd">Terms And Conditions</string>
     <string name="logoutMsg">Are you sure about you logging out?</string>
+    <string name="app_version" translatable="false">1.0.1</string>
+    <string name="upTxt" translatable="false">Update Version</string>
     <string-array name="insuranceSpinnerArray">
         <item>--Select--</item>
         <item>NICO</item>

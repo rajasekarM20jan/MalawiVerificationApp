@@ -46,6 +46,9 @@ import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 
+import org.json.JSONArray;
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.text.DateFormat;
 import java.util.ArrayList;
@@ -53,8 +56,17 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.TimeZone;
+import java.util.concurrent.TimeUnit;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.RequestBody;
+import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity implements LocationListener{
+    public static String latestVersion,versionUpdateURL;
+    ArrayList<String> myList;
     public static final String Latitude = "latitude";
     public static final String Longitude = "longitude";
     public static Context context;
@@ -83,6 +95,8 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
     public static String certificateNum, vehicleNum, insuranceCompany, chassisNum,
             policyStartDate, policyEndDate, make, model, cancelledDate, cancelledReason,status,yearOfManufacture;
     public static String vehicleRegNum, chaNum,engineNum,coverType,validFrom,crRef,crComments;
+    public static String app_version;
+    public static int base_version;
 
     @SuppressLint("HardwareIds")
     @Override
@@ -93,19 +107,16 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         context=this;
         try{
             setLocale(this,"en");
-            /*String sToken = "eyJhbGciOiJSU0EtT0FFUCIsImVuYyI6IkEyNTZDQkMtSFM1MTIiLCJraWQiOiI4YmI1NDE4YWYzYjQ0YjdiOTI2OGM3YjRhYTg1NTYzMiIsInR5cCI6IkpXVCIsImN0eSI6IkpXVCJ9.PLZeaUcd7_2Sc1vxRwH6hPEIaivip9gXkLxf33l1oLLIz2NjC3-6XZSagUKzyzdZhZfeMFPzA7b4g7sNG-_ENlOweT31YD4XIyk00ZfLGS2sT4CVI4J9tibIGqtUnNTXF4F_hapl1iLbT--bzOXqYfIMAx7xgXfBNdBYrMV8RF273ARCpm6Po21hO1XyvcLkrNfesePAUNSJqZC1FwtMZeVAxdrCqeB6fHGNnSvA8HgNVk5ro4O8FFN8rhISH_8oQcfpneAiGkUco0jSTqLXqZUc2fCKTnwTuzjmJXEUs6s1U0VQ3hDTCUK1E-6OmRNjGsxhFG_-KCNSrF6Tz-Y8yw.j18m1Y1Ku8ax1ZFOJOrymQ.FfeMH9U_1e18H84DDEvz-0ENrKwRZFOYIXacMSxqNazQGe21T4T_R2VCCu9S9mqO-KSTdClwq78gGCkOv-ima_OLYbJKFnfbR8JZ2nuqJ9jlTWfrFror-C3Dqna-2i91cy--2hpuAN2jczvGj4kQBCw-W0xTu-vZi5wkdrG8n3EosTy2d40EdxcbsbPF63YU-UthVvylGwpRfTocuwKdPWWU03xmNofsnuKt4fYdTOvsr-q27fYqQ2X2mZtDgq63DUcdtjj6L4Gam-zk0w8Z8LYk8TGMrzleaGLXOBxkFNRr7x-_f36FdxSKiSDKh7KRXakrepSZ0Rd8ZNaVfVdVFaRrvJqCnSNtAEbKpNMxNdLMuEdmS4n0_G88JvPjXSmRC9WtUtDzdk92H7GDjUGLndqHkurmWWiiMPytiEVTpp8rr-dGTFzKVW5iT0t2qB9JJkfxVZeniztO6OoWxx81INCe7Dw-YBGIUj_Vo7fGC93QDZVsHGR_pF3jJRnXZrRKkxpH73-Pxb0vaWEf520mYMdv93bN0CgwuxMX9fhP5Jcq_IdskETxfPH7zZVz5lnuKsP0jes1rpsl_jzHVC7h7wThv1jJOTdYenkXEIq5z0ZuSWgIyxv-V4WiVpINngIn81JSQ8GZ7U8-MG7PjviTO3x02TCpWL-G6z1PSfVB02oZTLBD2Cyn06QEh0GUURWmRBuu80TGwdLUW2vSpPV_xmTtWNY4daIfbpbbj8VMHR-j7UXPWfdyGPXRbnkG3N_IZC9qLvs0MYjGesnFP0BC0pxzw8_TrvTdJqOD893O82E7_nz73MXa5UuWfhIGag41OVuL3bOay8Dwf9urJipyUyGIJzRFXQlXlBtGvAFDf2larE9MNJdVop3fxq-J_cY8JZOAWUSwSC93QMJFhEhdKlzXVp2gyu7AaOicdpsNslihSQpCFVkac2hTdAPWw5kvDGrKdVDIWNZz0GvhQuMcv7neGDpBnOmK68ouzOuWvA1VSLkecSmLS-31aYm3iUr8kdpYvO7FzsvhOzsfpXIWECyUgx2yEwkyyO3O-Wgf9rK8YItj2PxshzrNe_EcX5hVNoz5C91HBHISo9QFTHo6wR9XY8xtJgsE3CbgBey2Xuj2SZu1bd4tcmXsdgKe8rQhYjpGkpS7moL-fVjJjSY-IzVngIxWAhRV-EeKX3RZ66ff09I_mFyyDc6Fk3P9qU6xC8IDZS_50SE_8O7EvGwQU3e1jIp0DMHcZnPQ_LIl9IWh0RrN_9gYeh9sp1I3EGegs3ihoRZocJXlmXLTdgMtuw9xAJNXFX2iuT__c8X1WWGqVoEjyDoBho38Uy9eGXwMLDOIYNcpFj__mA8lXKp2Q7PnNxyI2Ee8PFnw27-ffrEW531iF--By8fApTipwfi3TsbYPTcD7CFXrAJd8ETyx7ObYm8W-5khipX0M86MT1mlFLNlxVmf6pj6hOb0HbsUx6C1FKzwBY-WPAdMKsGe5w.IySOjiv0RjiiBFF4ONvBnO1GUKQ-RikvgMvNAhnfoAc";
 
-            DataBaseHelper mydb = new DataBaseHelper(context);
-            if (mydb.getTokenDetails().getCount() != 0) {
-                mydb.deleteTokenData();
-            }
-            boolean isInserted = mydb.insertToken(sToken);
-            if (isInserted) {
-                Intent intent = new Intent(context, Dashboard.class);
-                startActivity(intent);
-            } else {
-                Toast.makeText(context, "Token is not stored...", Toast.LENGTH_SHORT).show();
-            }*/
+            app_version = getString(R.string.app_version);
+
+            String[] app_version_split = app_version.split("\\.");
+
+            base_version = Integer.parseInt(app_version_split[app_version_split.length - 1]);
+
+
+            //getUpdateVersions();
+
 
             DataBaseHelper mydb = new DataBaseHelper(context);
             if (mydb.getTokenDetails().getCount() == 0) {
@@ -124,6 +135,114 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         getUserLocationForEvery2minutes();
     }
 
+    void getUpdateVersions(){
+        try {
+            if (isNetworkConnected(context)) {
+                //creating the thread to run operations in background thread.
+                Thread t = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        String postUrl = getString(R.string.base_url)+"/MobileApp/GetAllMobileVersions";
+                        final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
+                        JsonObject Details = new JsonObject();
+                        String insertString = Details.toString();
+                        RequestBody body = RequestBody.create(JSON, insertString);
+                        Request request = new Request.Builder()
+                                .url(postUrl)
+                                .post(body)
+                                .build();
+                        OkHttpClient client = new OkHttpClient.Builder()
+                                .connectTimeout(120, TimeUnit.SECONDS)
+                                .readTimeout(120,TimeUnit.SECONDS).build();
+                        Response staticResponse = null;
+                        try {
+                            staticResponse = client.newCall(request).execute();
+                            String staticRes = staticResponse.body().string();
+                            System.out.println("qwertyuiop : "+staticRes);
+
+                            if(staticResponse.code()==200) {
+
+                                final JSONObject staticJsonObj = new JSONObject(staticRes);
+
+                                if (staticJsonObj.getInt("rcode") == 200) {
+                                    runOnUiThread(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            try {
+                                                String appVersion=getString(R.string.app_version);
+                                                myList=new ArrayList<>();
+                                                JSONObject rObj=staticJsonObj.getJSONObject("rObj");
+                                                JSONArray getAllAndroidLiteVersion=rObj.getJSONArray("getAllAndroidVersion");
+                                                for(int i=0;i<getAllAndroidLiteVersion.length();i++){
+                                                    JSONObject mobileVersionObj=getAllAndroidLiteVersion.getJSONObject(i);
+                                                    myList.add(mobileVersionObj.getString("mobileOSVersion"));
+                                                }
+
+                                                latestVersion=myList.get(myList.size()-1).toString();
+                                                if(myList.get(myList.size()-1).equals(appVersion)){
+                                                    try {
+                                                        DataBaseHelper mydb = new DataBaseHelper(context);
+                                                        if (mydb.getTokenDetails().getCount() == 0) {
+                                                            startActivity(new Intent(context, TermsPage.class));
+                                                        }else {
+                                                            startActivity(new Intent(context,Dashboard.class));
+                                                        }
+                                                    }
+                                                    catch (Exception e) {
+                                                        e.printStackTrace();
+                                                    }
+                                                }else{
+                                                    versionUpdateURL=staticJsonObj.getJSONObject("rObj")
+                                                            .getJSONArray("getAllAndroidVersion")
+                                                            .getJSONObject(myList.size()-1).getString("aPKURL");
+                                                        /*alertTheUser(context,"Update!","Please update to the latest version of the app to continue.")
+                                                                .setCancelable(false)
+                                                                .setPositiveButton("UPDATE",(dialog, l) ->{
+                                                                    dialog.dismiss();
+                                                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(versionUpdateURL)));
+                                                                    finishAffinity();
+                                                                }).show();*/
+                                                    startActivity(new Intent(context, UpdateActivity.class));
+                                                }
+                                            } catch (Exception e) {
+                                                e.printStackTrace();
+                                            }
+                                        }
+                                    });
+                                }
+                            }else{
+                                runOnUiThread(new Runnable() {
+                                    public void run() {
+                                        try {
+                                            alertTheUser(context,"",getString(R.string.cmn_wrong_msg))
+                                                    .setPositiveButton("ok", new DialogInterface.OnClickListener() {
+                                                        @Override
+                                                        public void onClick(DialogInterface dialogInterface, int i) {
+                                                            dialogInterface.dismiss();
+                                                            finishAffinity();
+                                                        }
+                                                    }).show();
+                                        } catch (Exception e) {
+                                            e.printStackTrace();
+                                        }
+                                    }
+                                });
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                });
+                t.start();
+
+
+            } else {
+                Toast.makeText(this, getString(R.string.noNetwork), Toast.LENGTH_SHORT).show();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     // To alert the user using alert dialog.
     public static AlertDialog.Builder alertTheUser(Context context, String Title, String Message) {

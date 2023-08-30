@@ -566,6 +566,7 @@ public class LoginOTP extends AppCompatActivity {
                         String postUrl = getString(R.string.base_url)+"/api/digital/core/VerifyingAuthority/SendVerificationCode";
                         final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                         JsonObject Details = new JsonObject();
+                        Details.addProperty("countryCode","+265");
                         Details.addProperty("phoneNumber",mobileNumber);
                         String insertString = Details.toString();
                         RequestBody body = RequestBody.create(JSON, insertString);
@@ -594,9 +595,228 @@ public class LoginOTP extends AppCompatActivity {
                                 if (staticJsonObj.getInt("rcode") == 200) {
                                     runOnUiThread(() -> {
                                         try {
+                                            try {
+                                                if (p.isShowing()) {
+                                                    p.dismiss();
+                                                }
+                                            }catch (Exception e){
+                                                e.printStackTrace();
+                                            }
                                             Login.otp=staticJsonObj.getJSONObject("rObj").getString("VerificationCode");
                                             Login.sessionID=staticJsonObj.getJSONObject("rObj").getString("sessionID");
-                                            startActivity(new Intent(context, LoginOTP.class));
+                                            String otp=Login.otp;
+                                            System.out.println("OTP is: "+otp);
+                                            otpEditText1.setText(String.valueOf(otp.charAt(0)));
+                                            otpEditText2.setText(String.valueOf(otp.charAt(1)));
+                                            otpEditText3.setText(String.valueOf(otp.charAt(2)));
+                                            otpEditText4.setText(String.valueOf(otp.charAt(3)));
+                                            otpEditText5.setText(String.valueOf(otp.charAt(4)));
+                                            otpEditText6.setText(String.valueOf(otp.charAt(5)));
+                                            otpEditText1.addTextChangedListener(new TextWatcher() {
+                                                @Override
+                                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                                }
+
+                                                @Override
+                                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                                    try {
+                                                        if (s.length() == 1) {
+                                                            otpEditText2.requestFocus();
+                                                        }
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void afterTextChanged(Editable s) {
+                                                }
+                                            });
+
+                                            otpEditText2.addTextChangedListener(new TextWatcher() {
+                                                @Override
+                                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+                                                }
+
+                                                @Override
+                                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                                    try {
+                                                        if (s.length() == 1) {
+                                                            otpEditText3.requestFocus();
+                                                        }
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void afterTextChanged(Editable s) {
+                                                }
+                                            });
+
+                                            otpEditText3.addTextChangedListener(new TextWatcher() {
+                                                @Override
+                                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                                                }
+
+                                                @Override
+                                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                                    try {
+                                                        if (s.length() == 1) {
+                                                            otpEditText4.requestFocus();
+                                                        }
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void afterTextChanged(Editable s) {
+                                                }
+                                            });
+
+                                            otpEditText4.addTextChangedListener(new TextWatcher() {
+                                                @Override
+                                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                                                }
+
+                                                @Override
+                                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                                    try {
+                                                        if (s.length() == 1) {
+                                                            otpEditText5.requestFocus();
+                                                        }
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void afterTextChanged(Editable s) {
+                                                }
+                                            });
+
+                                            otpEditText5.addTextChangedListener(new TextWatcher() {
+                                                @Override
+                                                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                                                }
+
+                                                @Override
+                                                public void onTextChanged(CharSequence s, int start, int before, int count) {
+                                                    try {
+                                                        if (s.length() == 1) {
+                                                            otpEditText6.requestFocus();
+                                                        }
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                    }
+                                                }
+
+                                                @Override
+                                                public void afterTextChanged(Editable s) {
+                                                }
+                                            });
+
+                                            otpEditText2.setOnKeyListener(new View.OnKeyListener() {
+                                                @Override
+                                                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                                                    try {
+                                                        if (keyCode == KeyEvent.KEYCODE_DEL && event.getAction() == KeyEvent.ACTION_DOWN) {
+                                                            if (otpEditText2.getText().length() == 0) {
+                                                                otpEditText1.setText("");
+                                                                otpEditText1.requestFocus();
+                                                                return true; // Consume the event
+                                                            }
+                                                        }
+                                                        return false;
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                        return false;
+                                                    }
+                                                }
+                                            });
+
+                                            otpEditText3.setOnKeyListener(new View.OnKeyListener() {
+                                                @Override
+                                                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                                                    try {
+                                                        if (keyCode == KeyEvent.KEYCODE_DEL && event.getAction() == KeyEvent.ACTION_DOWN) {
+                                                            if (otpEditText3.getText().length() == 0) {
+                                                                otpEditText2.setText("");
+                                                                otpEditText2.requestFocus();
+                                                                return true; // Consume the event
+                                                            }
+                                                        }
+                                                        return false;
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                        return false;
+                                                    }
+                                                }
+                                            });
+
+                                            otpEditText4.setOnKeyListener(new View.OnKeyListener() {
+                                                @Override
+                                                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                                                    try {
+                                                        if (keyCode == KeyEvent.KEYCODE_DEL && event.getAction() == KeyEvent.ACTION_DOWN) {
+                                                            if (otpEditText4.getText().length() == 0) {
+                                                                otpEditText3.setText("");
+                                                                otpEditText3.requestFocus();
+                                                                return true; // Consume the event
+                                                            }
+                                                        }
+                                                        return false;
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                        return false;
+                                                    }
+                                                }
+                                            });
+
+                                            otpEditText5.setOnKeyListener(new View.OnKeyListener() {
+                                                @Override
+                                                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                                                    try {
+                                                        if (keyCode == KeyEvent.KEYCODE_DEL && event.getAction() == KeyEvent.ACTION_DOWN) {
+                                                            if (otpEditText5.getText().length() == 0) {
+                                                                otpEditText4.setText("");
+                                                                otpEditText4.requestFocus();
+                                                                return true; // Consume the event
+                                                            }
+                                                        }
+                                                        return false;
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                        return false;
+                                                    }
+                                                }
+                                            });
+
+                                            otpEditText6.setOnKeyListener(new View.OnKeyListener() {
+                                                @Override
+                                                public boolean onKey(View v, int keyCode, KeyEvent event) {
+                                                    try {
+                                                        if (keyCode == KeyEvent.KEYCODE_DEL && event.getAction() == KeyEvent.ACTION_DOWN) {
+                                                            if (otpEditText6.getText().length() == 0) {
+                                                                otpEditText5.setText("");
+                                                                otpEditText5.requestFocus();
+                                                                return true; // Consume the event
+                                                            }
+                                                        }
+                                                        return false;
+                                                    }catch (Exception e){
+                                                        e.printStackTrace();
+                                                        return false;
+                                                    }
+                                                }
+                                            });
+
+                                            resendLayout.setVisibility(View.GONE);
+                                            OTPSeconds.setVisibility(View.VISIBLE);
+                                            getTimerText();
                                         }catch (Exception e){
                                             e.printStackTrace();
                                         }
