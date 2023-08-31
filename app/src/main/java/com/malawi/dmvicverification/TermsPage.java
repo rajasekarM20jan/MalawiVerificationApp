@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -35,9 +36,21 @@ public class TermsPage extends AppCompatActivity {
     void init(){
         try{
             webView=findViewById(R.id.webView);
-            webView.loadUrl("https://www.bimayangu.ke/api/document/ProfileTermsCondition.html");
+            webView.loadUrl("https://insurancedevelopment.blob.core.windows.net/termscondition/ProfileTermsCondition.html");
             acceptTerms=findViewById(R.id.acceptTerms);
-            acceptTerms.setOnClickListener(l->startActivity(new Intent(context,Authority.class)));
+            acceptTerms.setOnClickListener(l->{
+                DataBaseHelper mydb = new DataBaseHelper(context);
+                if (mydb.getTokenDetails().getCount() != 0) {
+                    mydb.deleteTerms();
+                }
+                boolean isInserted = mydb.insertTerms("checked");
+                if (isInserted) {
+                    Intent intent = new Intent(context,Authority.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(context, "terms is not stored...", Toast.LENGTH_SHORT).show();
+                }
+                });
         }catch (Exception e){
             e.printStackTrace();
         }

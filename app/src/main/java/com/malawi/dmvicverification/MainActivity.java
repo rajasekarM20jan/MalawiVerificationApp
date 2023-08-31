@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
         setContentView(R.layout.activity_main);
         context=this;
         try{
+            getSupportActionBar().hide();
             setLocale(this,"en");
 
             app_version = getString(R.string.app_version);
@@ -115,15 +116,10 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             base_version = Integer.parseInt(app_version_split[app_version_split.length - 1]);
 
 
-            //getUpdateVersions();
+            getUpdateVersions();
 
 
-            DataBaseHelper mydb = new DataBaseHelper(context);
-            if (mydb.getTokenDetails().getCount() == 0) {
-                startActivity(new Intent(context, TermsPage.class));
-            }else {
-                startActivity(new Intent(context,Dashboard.class));
-            }
+
 
 
 
@@ -142,7 +138,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                 Thread t = new Thread(new Runnable() {
                     @Override
                     public void run() {
-                        String postUrl = getString(R.string.base_url)+"/MobileApp/GetAllMobileVersions";
+                        String postUrl = getString(R.string.base_url)+"/api/digital/core/MasterData/GetAllMSTMobileVersion";
                         final MediaType JSON = MediaType.parse("application/json; charset=utf-8");
                         JsonObject Details = new JsonObject();
                         String insertString = Details.toString();
@@ -172,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                                                 String appVersion=getString(R.string.app_version);
                                                 myList=new ArrayList<>();
                                                 JSONObject rObj=staticJsonObj.getJSONObject("rObj");
-                                                JSONArray getAllAndroidLiteVersion=rObj.getJSONArray("getAllAndroidVersion");
+                                                JSONArray getAllAndroidLiteVersion=rObj.getJSONArray("getAllAndroidMobileVersion");
                                                 for(int i=0;i<getAllAndroidLiteVersion.length();i++){
                                                     JSONObject mobileVersionObj=getAllAndroidLiteVersion.getJSONObject(i);
                                                     myList.add(mobileVersionObj.getString("mobileOSVersion"));
@@ -182,10 +178,14 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                                                 if(myList.get(myList.size()-1).equals(appVersion)){
                                                     try {
                                                         DataBaseHelper mydb = new DataBaseHelper(context);
-                                                        if (mydb.getTokenDetails().getCount() == 0) {
-                                                            startActivity(new Intent(context, TermsPage.class));
-                                                        }else {
-                                                            startActivity(new Intent(context,Dashboard.class));
+                                                        if(mydb.getTerms().getCount()!=0){
+                                                            if (mydb.getTokenDetails().getCount() == 0) {
+                                                                startActivity(new Intent(context, Authority.class));
+                                                            }else {
+                                                                startActivity(new Intent(context,Dashboard.class));
+                                                            }
+                                                        }else{
+                                                            startActivity(new Intent(context,TermsPage.class));
                                                         }
                                                     }
                                                     catch (Exception e) {
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
                                                     }
                                                 }else{
                                                     versionUpdateURL=staticJsonObj.getJSONObject("rObj")
-                                                            .getJSONArray("getAllAndroidVersion")
+                                                            .getJSONArray("getAllAndroidMobileVersion")
                                                             .getJSONObject(myList.size()-1).getString("aPKURL");
                                                         /*alertTheUser(context,"Update!","Please update to the latest version of the app to continue.")
                                                                 .setCancelable(false)

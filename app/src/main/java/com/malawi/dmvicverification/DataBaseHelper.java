@@ -14,6 +14,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     private static  final String TokenTable ="tokenvalue";
     private static final String QrTable="qrTable";
 
+    private static final String termsTable="termsTable";
+
     public DataBaseHelper(@Nullable Context context) {
         super(context, "malawiVerificationApp", null, base_version);
     }
@@ -23,6 +25,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         try {
             db.execSQL("CREATE TABLE " + TokenTable + "(tokenValue TEXT)");
             db.execSQL("CREATE TABLE " + QrTable + "(baseUrl TEXT,color TEXT,language TEXT, ImageFile TEXT)");
+            db.execSQL("CREATE TABLE " + termsTable + "(termsValue TEXT)");
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -33,6 +36,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         try {
             db.execSQL("DROP TABLE IF EXISTS " + TokenTable);
             db.execSQL("DROP TABLE IF EXISTS " + QrTable);
+            db.execSQL("DROP TABLE IF EXISTS " + termsTable);
             onCreate(db);
         }catch (Exception e){
             e.printStackTrace();
@@ -120,4 +124,42 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return;
     }
 
+    public boolean insertTerms(String terms)
+    {
+        try
+        {
+            SQLiteDatabase db = this.getWritableDatabase();
+            ContentValues contentValues = new ContentValues();
+            contentValues.put("termsValue",terms);
+            long result = db.insert(termsTable,null, contentValues);
+            if(result == -1)
+            {
+                return  false;
+            }
+            else
+            {
+                return  true;
+            }
+        }
+        catch (Exception ex)
+        {
+            ex.getStackTrace();
+            return false;
+        }
+
+    }
+
+    public Cursor getTerms()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("Select * from "+ termsTable,null);
+        return res;
+    }
+
+    public void deleteTerms()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("delete from "+ termsTable);
+        return;
+    }
 }

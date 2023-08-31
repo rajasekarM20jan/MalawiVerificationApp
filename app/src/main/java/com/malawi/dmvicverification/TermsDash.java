@@ -34,7 +34,7 @@ public class TermsDash extends AppCompatActivity {
     void init(){
         try{
             webView=findViewById(R.id.webView);
-            webView.loadUrl("https://www.bimayangu.ke/api/document/ProfileTermsCondition.html");
+            webView.loadUrl("https://insurancedevelopment.blob.core.windows.net/termscondition/ProfileTermsCondition.html");
         }catch (Exception e){
             e.printStackTrace();
         }
