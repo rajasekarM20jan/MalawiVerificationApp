@@ -51,6 +51,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -306,6 +307,11 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             Locale currentLocale = Locale.getDefault();
             String countryCode = currentLocale.getCountry();
             Locale locale=new Locale("en",countryCode);
+
+            Locale locale2 = Locale.ENGLISH;
+            SimpleDateFormat sf=new SimpleDateFormat("dd-MMM-yyyy HH:mm:ss",locale2);
+            Date d=new Date();
+            String date=sf.format(d);
             // Getting basic device information and storing the values.
             String androidOS = Build.VERSION.RELEASE;
             String model = Build.MANUFACTURER + " - " + Build.MODEL;
@@ -318,7 +324,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener{
             mobileparamters.addProperty("deviceID", uniqueidval);
             mobileparamters.addProperty("deviceID2", uniqueidval);
             mobileparamters.addProperty("deviceTimeZone", TimeZone.getDefault().getDisplayName(false, TimeZone.SHORT, locale));
-            mobileparamters.addProperty("deviceDateTime", DateFormat.getDateTimeInstance(DateFormat.DEFAULT, DateFormat.DEFAULT, locale).format(new Date()));
+            mobileparamters.addProperty("deviceDateTime", date);
             mobileparamters.addProperty("deviceLatitude", locationPref.getString(MainActivity.Latitude, null));
             mobileparamters.addProperty("deviceLongitude", locationPref.getString(MainActivity.Longitude, null));
             mobileparamters.addProperty("deviceIpAddress", ipaddress);

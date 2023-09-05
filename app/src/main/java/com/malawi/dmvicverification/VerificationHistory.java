@@ -51,6 +51,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.MediaType;
@@ -97,8 +98,8 @@ public class VerificationHistory extends AppCompatActivity {
     void basicFunctions(){
         try{
             Calendar cal=Calendar.getInstance();
-            String pattern = "dd-MMM-yyyy";
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+            Locale locale1=Locale.ENGLISH;
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMM-yyyy",locale1);
             tillDate=simpleDateFormat.format(cal.getTime());
             Calendar cal2=Calendar.getInstance();
             cal2.add(Calendar.DAY_OF_YEAR, -7);
@@ -385,8 +386,8 @@ public class VerificationHistory extends AppCompatActivity {
                 datePickerDialog.setOnDateSetListener((datePicker, year, month, date) -> {
                     Calendar policyStartDateCalender = Calendar.getInstance();
                     policyStartDateCalender.set(year, month, date);
-                    String pattern = "dd-MMM-yyyy";
-                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
+                    Locale locale1=Locale.ENGLISH;
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MMM-yyyy",locale1);
                     String formatDate = simpleDateFormat.format(policyStartDateCalender.getTime());
                     tv.setText(formatDate);
                     if(type.equals("tillDate")){
